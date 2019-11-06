@@ -1,0 +1,1638 @@
+
+
+
+    <string name="ACHIEVER">Achiever
+
+    <string name="ACTIVATOR">Activator
+
+    <string name="ADAPTABILITY">Adaptability
+
+    <string name="ANALYTICAL">Analytical
+
+    <string name="ARRANGER">Arranger
+
+    <string name="BELIEF">Belief
+
+    <string name="COMMAND">Command
+
+    <string name="COMMUNICATION">Communication
+
+    <string name="COMPETITION">Competition
+
+    <string name="CONNECTEDNESS">Connectedness
+
+    <string name="CONSISTENCY">Consistency
+
+    <string name="CONTEXT">Context
+
+    <string name="DELIBERATIVE">Deliberative
+
+    <string name="DEVELOPER">Developer
+
+    <string name="DISCIPLINE">Discipline
+
+    <string name="EMPATHY">Empathy
+
+    <string name="FOCUS">Focus
+
+    <string name="FUTURISTIC">Futuristic
+
+    <string name="HARMONY">Harmony
+
+    <string name="IDEATION">Ideation
+
+    <string name="INCLUDER">Includer
+
+    <string name="INDIVIDUALIZATION">Individualization
+
+    <string name="INPUT">Input
+
+    <string name="INTELLECTION">Intellection
+
+    <string name="LEARNER">Learner
+
+    <string name="MAXIMIZER">Maximizer
+
+    <string name="POSITIVITY">Positivity
+
+    <string name="RELATOR">Relator
+
+    <string name="RESPONSIBILITY">Responsibility
+
+    <string name="RESTORATIVE">Restorative
+
+    <string name="SELFASSRUANCE">Self-Assurance
+
+    <string name="STRATEGIC">Strategic
+
+    <string name="SIGNIFICANCE">Significance
+
+    <string name="WOO">Woo
+
+
+
+Descriptions:
+
+    Achiever: +++++
+    People who are especially talented in the Achiever theme have a great deal of stamina and work hard. They take great satisfaction from being busy and productive.
+
+    Activator: +++++
+    People who are especially talented in the Activator theme can make things happen by turning thoughts into action. They are often impatient.
+
+    Adaptability: +++++
+    People who are especially talented in the Adaptability theme prefer to “go with the flow.” They tend to be “now” people who take things as they come and discover the future one day at a time.
+
+    Analytical: +++++
+    People who are especially talented in the Analytical theme search for reasons and causes. They have the ability to think about all the factors that might affect a situation.
+
+    Arranger: +++++
+    People who are especially talented in the Arranger theme can organize, but they also have a flexibility that complements this ability. They like to figure out how all of the pieces and resources can be arranged for maximum productivity.
+
+    Belief: +++++
+    People who are especially talented in the Belief theme have certain core values that are unchanging. Out of these values emerges a defined purpose for their life.
+
+    Command: +++++
+    People who are especially talented in the Command theme have presence. They can take control of a situation and make decisions.
+
+    Communication: +++++
+    People who are especially talented in the Communication theme generally find it easy to put their thought into words. They are good conversationalists and presenters.
+
+    Competition: +++++
+    People who are especially talented in the Competition theme measure their progress against the performance of others. They strive to win first and revel in contests.
+
+    Connectedness: +++++
+    People who are especially talented in the Connectedness theme have faith in the links between all things. They believe there are few coincidences and that almost every event has a reason.
+
+    Consistency: +++++
+    People who are especially talented in the Consistency theme are keenly aware of the need to treat people the same. They try to treat everyone in the world with consistency by setting up clear rules and adhering to them.
+
+    Context: +++++
+    People who are especially talented in the Context theme enjoy thinking about the past. They understand the present by reaching its history.
+
+    Deliberative: +++++
+    People who are especially talented in the Deliberative theme are best described by the serious care they take in making decisions or choices. They anticipate the obstacles.
+
+    Developer: +++++
+    People who are especially talented in the Developer theme recognize and cultivate the potential in others. They spot the signs of each small improvement and derive satisfaction from these improvements.
+
+    Discipline: +++++
+    People who are especially talented in the Discipline theme enjoy routine and structure. Their world is best described by the order they create.
+
+    Empathy: +++++
+    People who are especially talented in the Empathy theme can sense the feelings of other people by imaging themselves in others’ lives or others’ situations.
+
+    Focus: +++++
+    People who are especially talented in the Focus theme can take a direction, follow through, and make the corrections necessary to stay on track. They prioritize, then act.
+
+    Futuristic: +++++
+    People who are especially talented in the Futuristic theme are inspired by the future and what could be. They inspire others with their vision of the future.
+
+    Harmony: +++++
+    People who are especially talented in the Harmony theme look for consensus. They don’t enjoy conflict; rather, they seek areas of agreement.
+
+    Ideation: +++++
+    People who are especially talented in the Ideation theme are fascinated by ideas. They are able to find connections between seemingly disparate phenomena.
+
+    Includer: +++++
+    People who are especially talented in the Includer theme are accepting of others. They show awareness of those who feel left out and make an effort to include them.
+
+    Individualization: +++++
+    People who are especially talented in the Individualization theme are intrigued with the unique qualities of each person. They have a gift for figuring out how people who are different can work together productively.
+
+    Input: +++++
+    People who are especially talented in the Input theme have a craving to know more. Often they like to collect and archive all kinds of information.
+
+    Intellection: +++++
+    People who are especially talented in the Intellection theme are characterized by their intellectual activity. They are introspective and appreciate intellectual discussions.
+
+    Learner: +++++
+    People who are especially talented in the Learner theme have a great desire to learn and want to continuously improve. In particular, the process of learning, rather than the outcome, excites them.
+
+    Maximizer: +++++
+    People who are especially talented in the Maximizer theme focus on strengths as a way to stimulate personal and group excellence. They seek to transform something strong into something superb.
+
+    Positivity: +++++
+    People who are especially talented in the Positivity theme have an enthusiasm that is contagious. They are upbeat and can get others excited about what they are going to do.
+
+    Relator: +++++
+    People who are especially talented in the Relator theme enjoy close relationships with others. They find deep satisfaction in working hard with friends to achieve a goal.
+
+    Responsibility: +++++
+    People who are especially talented in the Responsibility theme take psychological ownership of what they say they will do. They are committed to stable values such as honesty and loyalty.
+
+    Restorative: +++++
+    People who are especially talented in the Restorative theme are adept at dealing with problems. They are good at figuring out what is wrong and resolving it.
+
+    SelfAssurance: +++++
+    People who are especially talented in the Self-Assurance theme feel confident in their ability to manage their own lives. They possess an inner compass that gives them confidence that their decisions are right.
+
+    Significance: +++++
+    People who are especially talented in the Significance theme want to be very important in the eyes of others. They are independent and want to be recognized.
+
+    Strategic: +++++
+    People who are especially talented in the Strategic theme create alternative ways to proceed. Faced with any given scenario, they can quickly spot the relevant patterns and issues.
+
+    Woo: +++++
+    People who are especially talented in the Woo theme love the challenge of meeting new people and winning them over. They derive satisfaction from breaking the ice and making a connection with another person.
+
+
+    <string name="who_am_i_woo_socializer">Socializer
+
+    <string name="who_am_i_woo_charmer">Charmer
+
+    <string name="who_am_i_woo_conversationalist">Conversationalist
+
+    <string name="who_am_i_woo_greeter">Greeter
+
+    <string name="who_am_i_woo_engager">Engager
+
+    <string name="who_am_i_woo_initiator">Initiator
+
+    <string name="who_am_i_woo_networker">Networker
+
+    <string name="who_am_i_woo_prospector">Prospector
+
+
+    <string name="who_am_i_significance_reacher">Reacher
+
+    <string name="who_am_i_significance_performer">Performer
+
+    <string name="who_am_i_significance_seeker">Seeker
+
+    <string name="who_am_i_significance_yearner">Yearner
+
+    <string name="who_am_i_significance_star">Star
+
+    <string name="who_am_i_significance_craver">Craver
+
+    <string name="who_am_i_significance_desirer">Desirer
+
+    <string name="who_am_i_significance_claimer">Claimer
+
+
+    <string name="who_am_i_strategic_selector">Selector
+
+    <string name="who_am_i_strategic_thinker">Thinker
+
+    <string name="who_am_i_strategic_strategist">Strategist
+
+    <string name="who_am_i_strategic_culler">Culler
+
+    <string name="who_am_i_strategic_sorter">Sorter
+
+    <string name="who_am_i_strategic_evaluator">Evaluator
+
+    <string name="who_am_i_strategic_mapmaker">Mapmaker
+
+    <string name="who_am_i_strategic_pathfinder">Pathfinder
+
+    <string name="who_am_i_strategic_planner">Planner
+
+
+    <string name="who_am_i_self_assurance_influencer">Influencer
+
+    <string name="who_am_i_self_assurance_controller">Controller
+
+    <string name="who_am_i_self_assurance_director">Director
+
+    <string name="who_am_i_self_assurance_riskTaker">Risk-Taker
+
+    <string name="who_am_i_self_assurance_leader">Leader
+
+
+    <string name="who_am_i_restorative_fixer">Fixer
+
+    <string name="who_am_i_restorative_diagnoser">Diagnoser
+
+    <string name="who_am_i_restorative_troubleshooter">Troubleshooter
+
+    <string name="who_am_i_restorative_investigator">Investigator
+
+    <string name="who_am_i_restorative_resuscitator">Resuscitator
+
+
+    <string name="who_am_i_responsibility_owner">Owner
+
+    <string name="who_am_i_responsibility_committer">Committer
+
+    <string name="who_am_i_responsibility_servant">Servant
+
+    <string name="who_am_i_responsibility_responder">Responder
+
+    <string name="who_am_i_responsibility_perfectionist">Perfectionist
+
+    <string name="who_am_i_responsibility_judge">Judge
+
+    <string name="who_am_i_responsibility_volunteer">Volunteer
+
+    <string name="who_am_i_responsibility_controller">Controller
+
+
+    <string name="who_am_i_relator_friend">Friend
+
+    <string name="who_am_i_relator_familyMember">Family Member
+
+    <string name="who_am_i_relator_loyalist">Loyalist
+
+    <string name="who_am_i_relator_caretaker">Caretaker
+
+
+    <string name="who_am_i_positivity_energizer">Energizer
+
+    <string name="who_am_i_positivity_optimist">Optimist
+
+    <string name="who_am_i_positivity_encourager">Encourager
+
+    <string name="who_am_i_positivity_influencer">Influencer
+
+    <string name="who_am_i_positivity_comedian">Comedian
+
+    <string name="who_am_i_positivity_performer">Performer
+
+    <string name="who_am_i_positivity_celebrator">Celebrator
+
+    <string name="who_am_i_positivity_recognizer">Recognizer
+
+    <string name="who_am_i_positivity_enthusiast">Enthusiast
+
+    <string name="who_am_i_positivity_promoter">Promoter
+
+
+    <string name="who_am_i_maximizer_leader">Leader
+
+    <string name="who_am_i_maximizer_driver">Driver
+
+    <string name="who_am_i_maximizer_clarifier">Clarifier
+
+    <string name="who_am_i_maximizer_persuader">Persuader
+
+    <string name="who_am_i_maximizer_fighter">Fighter
+
+    <string name="who_am_i_maximizer_challenger">Challenger
+
+    <string name="who_am_i_maximizer_demander">Demander
+
+    <string name="who_am_i_maximizer_perfectionist">Perfectionist
+
+    <string name="who_am_i_maximizer_qualityController">Quality Controller
+
+
+    <string name="who_am_i_learner_student">Student
+
+    <string name="who_am_i_learner_explorer">Explorer
+
+    <string name="who_am_i_learner_discoverer">Discoverer
+
+    <string name="who_am_i_learner_selfHelper">Self-Helper
+
+    <string name="who_am_i_learner_continuousImprover">Continuous-Improver
+
+    <string name="who_am_i_learner_expert">Expert
+
+
+    <string name="who_am_i_intellection_thinker">Thinker
+
+    <string name="who_am_i_intellection_philosopher">Philosopher
+
+    <string name="who_am_i_intellection_discussant">Discussant
+
+    <string name="who_am_i_intellection_muser">Muser
+
+    <string name="who_am_i_intellection_loner">Loner
+
+    <string name="who_am_i_intellection_writer">Writer
+
+    <string name="who_am_i_intellection_blogger">Blogger
+
+
+    <string name="who_am_i_input_archivist">Archivist
+
+    <string name="who_am_i_input_librarian">Librarian
+
+    <string name="who_am_i_input_collector">Collector
+
+    <string name="who_am_i_input_absorber">Absorber
+
+    <string name="who_am_i_input_curator">Curator
+
+    <string name="who_am_i_input_resourcer">Resourcer
+
+    <string name="who_am_i_input_circulator">Circulator
+
+
+    <string name="who_am_i_individualization_customizer">Customizer
+
+    <string name="who_am_i_individualization_observer">Observer
+
+    <string name="who_am_i_individualization_acceptor">Acceptor
+
+    <string name="who_am_i_individualization_noticer">Noticer
+
+    <string name="who_am_i_individualization_spotter">Spotter
+
+    <string name="who_am_i_individualization_anthropologist">Anthropologist
+
+    <string name="who_am_i_individualization_novelist">Novelist
+
+    <string name="who_am_i_individualization_biographer">Biographer
+
+
+    <string name="who_am_i_includer_acceptor">Acceptor
+
+    <string name="who_am_i_includer_tolerator">Tolerator
+
+    <string name="who_am_i_includer_inviter">Inviter
+
+    <string name="who_am_i_includer_welcomer">Welcomer
+
+    <string name="who_am_i_includer_assimilator">Assimilator
+
+    <string name="who_am_i_includer_barrierBuster">Barrier-Buster
+
+
+    <string name="who_am_i_ideation_inventor">Inventor
+
+    <string name="who_am_i_ideation_creator">Creator
+
+    <string name="who_am_i_ideation_designer">Designer
+
+    <string name="who_am_i_ideation_artist">Artist
+
+    <string name="who_am_i_ideation_innovator">Innovator
+
+    <string name="who_am_i_ideation_brainstormer">Brainstormer
+
+    <string name="who_am_i_ideation_novelist">Novelist
+
+
+    <string name="who_am_i_harmony_mediator">Mediator
+
+    <string name="who_am_i_harmony_negotiator">Negotiator
+
+    <string name="who_am_i_harmony_arbitrator">Arbitrator
+
+    <string name="who_am_i_harmony_ombudsman">Ombudsman
+
+    <string name="who_am_i_harmony_ambassador">Ambassador
+
+    <string name="who_am_i_harmony_diplomat">Diplomat
+
+    <string name="who_am_i_harmony_pragmatist">Pragmatist
+
+    <string name="who_am_i_harmony_peacemaker">Peacemaker
+
+
+    <string name="who_am_i_futuristic_forecaster">Forecaster
+
+    <string name="who_am_i_futuristic_visionary">Visionary
+
+    <string name="who_am_i_futuristic_dreamer">Dreamer
+
+    <string name="who_am_i_futuristic_predictor">Predictor
+
+    <string name="who_am_i_futuristic_imaginer">Imaginer
+
+    <string name="who_am_i_futuristic_anticipator">Anticipator
+
+
+    <string name="who_am_i_focus_concentrator">Concentrator
+
+    <string name="who_am_i_focus_prioritizer">Prioritizer
+
+    <string name="who_am_i_focus_rudder">Rudder
+
+    <string name="who_am_i_focus_director">Director
+
+    <string name="who_am_i_focus_guide">Guide
+
+    <string name="who_am_i_focus_goalSetter">Goal Setter
+
+
+    <string name="who_am_i_empathy_feeler">Feeler
+
+    <string name="who_am_i_empathy_confidant">Confidant
+
+    <string name="who_am_i_empathy_expresser">Expresser
+
+    <string name="who_am_i_empathy_sage">Sage
+
+    <string name="who_am_i_empathy_absorber">Absorber
+
+    <string name="who_am_i_empathy_listener">Listener
+
+    <string name="who_am_i_empathy_resonator">Resonator
+
+
+    <string name="who_am_i_discpline_organizer">Organizer
+
+    <string name="who_am_i_discpline_planner">Planner
+
+    <string name="who_am_i_discpline_selfController">Self-Controller
+
+    <string name="who_am_i_discpline_architect">Architect
+
+    <string name="who_am_i_discpline_structurer">Structurer
+
+    <string name="who_am_i_discpline_perfectionist">Perfectionist
+
+
+    <string name="who_am_i_developer_investor">Investor
+
+    <string name="who_am_i_developer_coach">Coach
+
+    <string name="who_am_i_developer_mentor">Mentor
+
+    <string name="who_am_i_developer_teacher">Teacher
+
+    <string name="who_am_i_developer_encourager">Encourager
+
+    <string name="who_am_i_developer_stretcher">Stretcher
+
+
+    <string name="who_am_i_deliberative_riskAssessor">Risk-Assessor
+
+    <string name="who_am_i_deliberative_preventer">Preventer
+
+    <string name="who_am_i_deliberative_guardian">Guardian
+
+    <string name="who_am_i_deliberative_planner">Planner
+
+
+    <string name="who_am_i_context_historian">Historian
+
+    <string name="who_am_i_context_framer">Framer
+
+    <string name="who_am_i_context_recorder">Recorder
+
+    <string name="who_am_i_context_archaeologist">Archaeologist
+
+    <string name="who_am_i_context_genealogist">Genealogist
+
+
+    <string name="who_am_i_consistency_standardizer">Standardizer
+
+    <string name="who_am_i_consistency_ruleEnforcer">Rule-Enforcer
+
+    <string name="who_am_i_consistency_systematizer">Systematizer
+
+    <string name="who_am_i_consistency_referee">Referee
+
+
+    <string name="who_am_i_connectedness_integrator">Integrator
+
+    <string name="who_am_i_connectedness_bridgeBuilder">Bridge-Builder
+
+    <string name="who_am_i_connectedness_environmentalist">Environmentalist
+
+    <string name="who_am_i_connectedness_humanitarian">Humanitarian
+
+    <string name="who_am_i_connectedness_communitarian">Communitarian
+
+    <string name="who_am_i_connectedness_unifier">Unifier
+
+    <string name="who_am_i_connectedness_socialAdvocate">Social Advocate
+
+    <string name="who_am_i_connectedness_seeker">Seeker
+
+
+    <string name="who_am_i_competition_winner">Winner
+
+    <string name="who_am_i_competition_scorekeeper">Scorekeeper
+
+    <string name="who_am_i_competition_comparer">Comparer
+
+    <string name="who_am_i_competition_measurer">Measurer
+
+
+    <string name="who_am_i_communication_talker">Talker
+
+    <string name="who_am_i_communication_presenter">Presenter
+
+    <string name="who_am_i_communication_conversationalist">Conversationalist
+
+    <string name="who_am_i_communication_storyteller">Storyteller
+
+    <string name="who_am_i_communication_verbalProcessor">Verbal Processor
+
+    <string name="who_am_i_communication_explainer">Explainer
+
+    <string name="who_am_i_communication_writer">Writer
+
+
+    <string name="who_am_i_command_controller">Controller
+
+    <string name="who_am_i_command_leader">Leader
+
+    <string name="who_am_i_command_driver">Driver
+
+    <string name="who_am_i_command_clarifier">Clarifier
+
+    <string name="who_am_i_command_persuader">Persuader
+
+    <string name="who_am_i_command_fighter">Fighter
+
+    <string name="who_am_i_command_challenger">Challenger
+
+    <string name="who_am_i_command_intimidator">Intimidator
+
+
+    <string name="who_am_i_belief_missionary">Missionary
+
+    <string name="who_am_i_belief_contributor">Contributor
+
+    <string name="who_am_i_belief_believer">Believer
+
+    <string name="who_am_i_belief_altruist">Altruist
+
+
+    <string name="who_am_i_arranger_juggler">Juggler
+
+    <string name="who_am_i_arranger_orchestrator">Orchestrator
+
+    <string name="who_am_i_arranger_coordinator">Coordinator
+
+    <string name="who_am_i_arranger_rearranger">Rearranger
+
+    <string name="who_am_i_arranger_multiThinker">Multi-Thinker
+
+    <string name="who_am_i_arranger_controller">Controller
+
+    <string name="who_am_i_arranger_enlister">Enlister
+
+    <string name="who_am_i_arranger_conductor">Conductor
+
+
+    <string name="who_am_i_analytical_scientist">Scientist
+
+    <string name="who_am_i_analytical_measurer">Measurer
+
+    <string name="who_am_i_analytical_counter">Counter
+
+    <string name="who_am_i_analytical_factFinderUser">Fact-Finder/User
+
+    <string name="who_am_i_analytical_observer">Observer
+
+    <string name="who_am_i_analytical_logician">Logician
+
+
+    <string name="who_am_i_adaptability_firstResponder">First Responder
+
+    <string name="who_am_i_adaptability_earlyAdopter">Early Adopter
+
+    <string name="who_am_i_adaptability_accommodator">Accommodator
+
+    <string name="who_am_i_adaptability_follower">Follower
+
+
+    <string name="who_am_i_activator_catalyst">Catalyst
+
+    <string name="who_am_i_activator_initiator">Initiator
+
+    <string name="who_am_i_activator_instigator">Instigator
+
+    <string name="who_am_i_activator_starter">Starter
+
+    <string name="who_am_i_activator_originator">Originator
+
+    <string name="who_am_i_activator_influencer">Influencer
+
+
+    <string name="who_am_i_achiever_laborer">Laborer
+
+    <string name="who_am_i_achiever_worker">Worker
+
+    <string name="who_am_i_achiever_producer">Producer
+
+    <string name="who_am_i_achiever_doer">Doer
+
+    <string name="who_am_i_achiever_completer">Completer
+
+    <string name="who_am_i_achiever_finisher">Finisher
+
+
+    <string name="select_themes">Select %1$s CliftonStrengths&lt;small>&lt;sup>®&lt;/sup>&lt;/small>
+
+    <string name="considering_your_next_task_n_which_strength_would_be_most_useful">Considering your next task,  which strength would be most useful?
+
+    <string name="i_will_need_to_be_a_CDATA">I WILL NEED TO BE A &lt;b>%1$s&lt;/b> &lt;b>%2$s&lt;/b>
+
+    <string name="who_am_i">WHO AM I?
+
+
+
+    <string name="adjective_achiever_driven">Driven
+
+    <string name="adjective_achiever_diligent">Diligent
+
+    <string name="adjective_achiever_intense">Intense
+
+    <string name="adjective_achiever_selfMotivated">Self-Motivated
+
+    <string name="adjective_achiever_productive">Productive
+
+    <string name="adjective_achiever_ambitious">Ambitious
+
+    <string name="adjective_achiever_independent">Independent
+
+
+    <string name="adjective_activator_impatient">Impatient
+
+    <string name="adjective_activator_influential">Influential
+
+    <string name="adjective_activator_actionOriented">Action-Oriented
+
+    <string name="adjective_activator_initiating">Initiating
+
+    <string name="adjective_activator_catalytic">Catalytic
+
+    <string name="adjective_activator_propulsive">Propulsive
+
+    <string name="adjective_activator_fast">Fast
+
+    <string name="adjective_activator_dynamic">Dynamic
+
+
+    <string name="adjective_adaptability_flexible">Flexible
+
+    <string name="adjective_adaptability_responsive">Responsive
+
+    <string name="adjective_adaptability_easygoing">Easygoing
+
+    <string name="adjective_adaptability_present">Present
+
+    <string name="adjective_adaptability_inTheMoment">In The Moment
+
+    <string name="adjective_adaptability_spontaneous">Spontaneous
+
+    <string name="adjective_adaptability_agreeable">Agreeable
+
+    <string name="adjective_adaptability_existential">Existential
+
+
+    <string name="adjective_analytical_objective">Objective
+
+    <string name="adjective_analytical_numbersOriented">Numbers-Oriented
+
+    <string name="adjective_analytical_dataDriven">Data-Driven
+
+    <string name="adjective_analytical_dispassionate">Dispassionate
+
+    <string name="adjective_analytical_skeptical">Skeptical
+
+    <string name="adjective_analytical_questioning">Questioning
+
+    <string name="adjective_analytical_scientific">Scientific
+
+
+    <string name="adjective_arranger_flexible">Flexible
+
+    <string name="adjective_arranger_interactive">Interactive
+
+    <string name="adjective_arranger_controlling">Controlling
+
+    <string name="adjective_arranger_collaborative">Collaborative
+
+    <string name="adjective_arranger_multiThinking">Multi-Thinking
+
+    <string name="adjective_arranger_configuring">Configuring
+
+    <string name="adjective_arranger_realTime">Real-Time
+
+    <string name="adjective_arranger_resourceful">Resourceful
+
+
+    <string name="adjective_belief_certain">Certain
+
+    <string name="adjective_belief_stable">Stable
+
+    <string name="adjective_belief_unchanging">Unchanging
+
+    <string name="adjective_belief_principled">Principled
+
+    <string name="adjective_belief_passionate">Passionate
+
+    <string name="adjective_belief_committed">Committed
+
+    <string name="adjective_belief_selfSacrificing">Self-Sacrificing
+
+
+    <string name="adjective_command_decisive">Decisive
+
+    <string name="adjective_command_clarifying">Clarifying
+
+    <string name="adjective_command_driven">Driven
+
+    <string name="adjective_command_persuasive">Persuasive
+
+    <string name="adjective_command_challenging">Challenging
+
+    <string name="adjective_command_intimidating">Intimidating
+
+    <string name="adjective_command_assertive">Assertive
+
+    <string name="adjective_command_controlling">Controlling
+
+    <string name="adjective_command_opinionated">Opinionated
+
+    <string name="adjective_command_imposing">Imposing
+
+    <string name="adjective_command_strongWilled">Strong-Willed
+
+    <string name="adjective_command_candid">Candid
+
+
+    <string name="adjective_communication_talkative">Talkative
+
+    <string name="adjective_communication_presenting">Presenting
+
+    <string name="adjective_communication_verbal">Verbal
+
+    <string name="adjective_communication_transparent">Transparent
+
+    <string name="adjective_communication_interactive">Interactive
+
+    <string name="adjective_communication_conversational">Conversational
+
+    <string name="adjective_communication_expressive">Expressive
+
+    <string name="adjective_communication_captivating">Captivating
+
+    <string name="adjective_communication_entertaining">Entertaining
+
+
+    <string name="adjective_competition_scoreKeeping">Score-Keeping
+
+    <string name="adjective_competition_comparing">Comparing
+
+    <string name="adjective_competition_winning">Winning
+
+    <string name="adjective_competition_measuring">Measuring
+
+    <string name="adjective_competition_aspiring">Aspiring
+
+    <string name="adjective_competition_driven">Driven
+
+    <string name="adjective_competition_intense">Intense
+
+    <string name="adjective_competition_selective">Selective
+
+
+    <string name="adjective_connectedness_integrating">Integrating
+
+    <string name="adjective_connectedness_seeking">Seeking
+
+    <string name="adjective_connectedness_spiritual">Spiritual
+
+    <string name="adjective_connectedness_comforting">Comforting
+
+    <string name="adjective_connectedness_perceptive">Perceptive
+
+    <string name="adjective_connectedness_mystical">Mystical
+
+    <string name="adjective_connectedness_philosophic">Philosophic
+
+    <string name="adjective_connectedness_counseling">Counseling
+
+    <string name="adjective_connectedness_listening">Listening
+
+
+    <string name="adjective_consistency_fair">Fair
+
+    <string name="adjective_consistency_equal">Equal
+
+    <string name="adjective_consistency_leveling">Levling
+
+    <string name="adjective_consistency_compliant">Compliant
+
+    <string name="adjective_consistency_predictable">Predicable
+
+    <string name="adjective_consistency_consistent">Consistent
+
+    <string name="adjective_consistency_just">Just
+
+    <string name="adjective_consistency_practical">Practical
+
+    <string name="adjective_consistency_efficient">Efficient
+
+
+    <string name="adjective_context_historical">Historical
+
+    <string name="adjective_context_orienting">Orienting
+
+    <string name="adjective_context_perceptive">Perceptive
+
+    <string name="adjective_context_highlighting">Highlighting
+
+    <string name="adjective_context_collecting">Collecting
+
+    <string name="adjective_context_studious">Studious
+
+
+    <string name="adjective_deliberative_careful">Careful
+
+    <string name="adjective_deliberative_guarded">Guarded
+
+    <string name="adjective_deliberative_conservative">Conservative
+
+    <string name="adjective_deliberative_sensible">Sensible
+
+    <string name="adjective_deliberative_thoughtful">Thoughtful
+
+    <string name="adjective_deliberative_serious">Serious
+
+    <string name="adjective_deliberative_confidential">Confidential
+
+    <string name="adjective_deliberative_observant">Observant
+
+    <string name="adjective_deliberative_vigilant">Vigilant
+
+    <string name="adjective_deliberative_riskAverse">Risk-Averse
+
+    <string name="adjective_deliberative_private">Private
+
+    <string name="adjective_deliberative_compliant">Compliant
+
+
+    <string name="adjective_developer_patient">Patient
+
+    <string name="adjective_developer_perceptive">Perceptive
+
+    <string name="adjective_developer_effective">Effective
+
+    <string name="adjective_developer_encouraging">Encouraging
+
+    <string name="adjective_developer_investing">Investing
+
+    <string name="adjective_developer_othersOriented">Others-Oriented
+
+    <string name="adjective_developer_observant">Observant
+
+    <string name="adjective_developer_growthOriented">Growth-Oriented
+
+    <string name="adjective_developer_selfSacrificing">Self-Sacrificing
+
+    <string name="adjective_developer_helpful">Helpful
+
+
+    <string name="adjective_discipline_predictable">Predictable
+
+    <string name="adjective_discipline_detailOriented">Detail-Oriented
+
+    <string name="adjective_discipline_organized">Organized
+
+    <string name="adjective_discipline_efficient">Efficient
+
+    <string name="adjective_discipline_meticulous">Meticulous
+
+    <string name="adjective_discipline_structured">Structured
+
+    <string name="adjective_discipline_neat">Neat
+
+    <string name="adjective_discipline_orderly">Orderly
+
+    <string name="adjective_discipline_timely">Timely
+
+    <string name="adjective_discipline_rehearsed">Rehearsed
+
+    <string name="adjective_discipline_planned">Planned
+
+    <string name="adjective_discipline_exact">Exact
+
+
+    <string name="adjective_empathy_listening">Listening
+
+    <string name="adjective_empathy_emotional">Emotional
+
+    <string name="adjective_empathy_expressive">Expressive
+
+    <string name="adjective_empathy_sensitive">Sensitive
+
+    <string name="adjective_empathy_aware">Aware
+
+    <string name="adjective_empathy_intuitive">Intuitive
+
+    <string name="adjective_empathy_confidential">Confidential
+
+    <string name="adjective_empathy_helpful">Helpful
+
+    <string name="adjective_empathy_sensate">Sensate
+
+
+    <string name="adjective_focus_goalOriented">Goal-Oriented
+
+    <string name="adjective_focus_persevering">Persevering
+
+    <string name="adjective_focus_driven">Driven
+
+    <string name="adjective_focus_efficient">Efficient
+
+    <string name="adjective_focus_singleMinded">Single-Minded
+
+    <string name="adjective_focus_progressAware">Progress-Aware
+
+    <string name="adjective_focus_selective">Selective
+
+    <string name="adjective_focus_distractionAverse">Distraction-Averse
+
+
+    <string name="adjective_futuristic_creative">Creative
+
+    <string name="adjective_futuristic_inspiring">Inspiring
+
+    <string name="adjective_futuristic_vivid">Vivid
+
+    <string name="adjective_futuristic_anticipating">Anticipating
+
+    <string name="adjective_futuristic_imaginative">Imaginative
+
+    <string name="adjective_futuristic_expressive">Expressive
+
+    <string name="adjective_futuristic_communicating">Communicating
+
+    <string name="adjective_futuristic_perceptive">Perceptive
+
+    <string name="adjective_futuristic_futureOriented">Future-Oriented
+
+
+    <string name="adjective_harmony_practical">Practical
+
+    <string name="adjective_harmony_concrete">Concrete
+
+    <string name="adjective_harmony_conflictReducing">Conflict-Reducing
+
+    <string name="adjective_harmony_collaborative">Collaborative
+
+    <string name="adjective_harmony_agreeable">Agreeable
+
+    <string name="adjective_harmony_taskOriented">Task-Oriented
+
+
+    <string name="adjective_ideation_spontaneous">Spontaneous
+
+    <string name="adjective_ideation_creative">Creative
+
+    <string name="adjective_ideation_innovative">Innovative
+
+    <string name="adjective_ideation_collaborative">Collaborative
+
+    <string name="adjective_ideation_artistic">Artistic
+        v
+    <string name="adjective_ideation_insightful">Insightful
+
+    <string name="adjective_ideation_resourceful">Resourceful
+
+    <string name="adjective_ideation_stimulating">Stimulating
+
+
+    <string name="adjective_includer_accepting">Accepting
+
+    <string name="adjective_includer_tolerant">Tolerant
+
+    <string name="adjective_includer_interactive">Interactive
+
+    <string name="adjective_includer_perceptive">Perceptive
+
+    <string name="adjective_includer_othersOriented">Others-Oriented
+
+    <string name="adjective_includer_welcoming">Welcoming
+
+    <string name="adjective_includer_sensitive">Sensitive
+
+    <string name="adjective_includer_integrating">Integrating
+
+
+    <string name="adjective_individualization_aware">Aware
+
+    <string name="adjective_individualization_unique">Unique
+
+    <string name="adjective_individualization_perceptive">Perceptive
+
+    <string name="adjective_individualization_peopleOriented">People-Oriented
+
+    <string name="adjective_individualization_strengthsOriented">Strengths-Oriented
+
+    <string name="adjective_individualization_astute">Astute
+
+    <string name="adjective_individualization_fair">Fair
+
+    <string name="adjective_individualization_accurate">Accurate
+
+    <string name="adjective_individualization_insightful">Insightful
+
+    <string name="adjective_individualization_diverse">Diverse
+
+
+    <string name="adjective_input_resourceful">Resourceful
+
+    <string name="adjective_input_collecting">Collecting
+
+    <string name="adjective_input_inquisitive">Inquisitive
+
+    <string name="adjective_input_utilityAware">Utility-Aware
+
+    <string name="adjective_input_generous">Generous
+
+    <string name="adjective_input_wellRead">Well-Read
+
+    <string name="adjective_input_knowledgeable">Knowledgeable
+
+    <string name="adjective_input_investigative">Investigative
+
+
+    <string name="adjective_intellection_introspective">Introspective
+
+    <string name="adjective_intellection_solitary">Solitary
+
+    <string name="adjective_intellection_intellectual">Intellectual
+
+    <string name="adjective_intellection_philosophical">Philosophical
+
+    <string name="adjective_intellection_inDepth">In-Depth
+
+    <string name="adjective_intellection_reflective">Reflective
+
+    <string name="adjective_intellection_discontent">Discontent
+
+    <string name="adjective_intellection_thinking">Thinking
+
+    <string name="adjective_intellection_intense">Intense
+
+    <string name="adjective_intellection_musing">Musing
+
+    <string name="adjective_intellection_driven">Driven
+
+
+    <string name="adjective_learner_curious">Curious
+
+    <string name="adjective_learner_interested">Interested
+
+    <string name="adjective_learner_inquisitive">Inquisitive
+
+    <string name="adjective_learner_openMinded">Open-Minded
+
+    <string name="adjective_learner_studious">Studious
+
+    <string name="adjective_learner_passionate">Passionate
+
+    <string name="adjective_learner_competent">Competent
+
+
+    <string name="adjective_maximizer_selective">Selective
+
+    <string name="adjective_maximizer_strengthsOriented">Strengths-Oriented
+
+    <string name="adjective_maximizer_qualityOriented">Quality-Oriented
+
+    <string name="adjective_maximizer_resultsOriented">Results-Oriented
+
+    <string name="adjective_maximizer_strengthsObsessed">Strengths-Obsessed
+
+    <string name="adjective_maximizer_excellenceAware">Excellence-Aware
+
+    <string name="adjective_maximizer_discriminating">Discriminating
+
+    <string name="adjective_maximizer_choosy">Choosy
+
+    <string name="adjective_maximizer_judging">Judging
+
+    <string name="adjective_maximizer_sorting">Sorting
+
+    <string name="adjective_maximizer_dissatisfied">Dissatisfied
+
+
+    <string name="adjective_positivity_fun">Fun
+
+    <string name="adjective_positivity_optimistic">Optmisitic
+
+    <string name="adjective_positivity_hopeful">Hopeful
+
+    <string name="adjective_positivity_generous">Generous
+
+    <string name="adjective_positivity_giddy">Giddy
+
+    <string name="adjective_positivity_happy">Happy
+
+    <string name="adjective_positivity_enthusiastic">Enthusiastic
+
+    <string name="adjective_positivity_energetic">Energetic
+
+    <string name="adjective_positivity_joyful">Joyful
+
+    <string name="adjective_positivity_influential">Influential
+
+    <string name="adjective_positivity_dramatic">Dramatic
+
+    <string name="adjective_positivity_lighthearted">Lighthearted
+
+    <string name="adjective_positivity_positiveMinded">Positive-Minded
+
+
+    <string name="adjective_relator_friendly">Friendly
+
+    <string name="adjective_relator_caring">Caring
+
+    <string name="adjective_relator_authentic">Authentic
+
+    <string name="adjective_relator_genuine">Genuine
+
+    <string name="adjective_relator_intimate">Intimate
+
+    <string name="adjective_relator_transparent">Transparent
+
+    <string name="adjective_relator_truthful">Truthful
+
+    <string name="adjective_relator_revealing">Revealing
+
+
+    <string name="adjective_responsibility_diligent">Diligent
+
+    <string name="adjective_responsibility_conscientious">Conscientious
+
+    <string name="adjective_responsibility_judgmental">Judgmental
+
+    <string name="adjective_responsibility_loyal">Loyal
+
+    <string name="adjective_responsibility_driven">Driven
+
+    <string name="adjective_responsibility_dutiful">Dutiful
+
+    <string name="adjective_responsibility_dependable">Dependable
+
+    <string name="adjective_responsibility_serious">Serious
+
+    <string name="adjective_responsibility_committed">Committed
+
+    <string name="adjective_responsibility_selfSacrificing">Self-Sacrificing
+
+    <string name="adjective_responsibility_responsive">Responsive
+
+    <string name="adjective_responsibility_independent">Independent
+
+
+    <string name="adjective_restorative_problemOriented">Problem-Oriented
+
+    <string name="adjective_restorative_driven">Driven
+
+    <string name="adjective_restorative_investigative">Investigative
+
+    <string name="adjective_restorative_weaknessOriented">Weakness-Oriented
+
+    <string name="adjective_restorative_responsive">Responsive
+
+    <string name="adjective_restorative_unintimidated">Unintimidated
+
+    <string name="adjective_restorative_insightful">Insightful
+
+
+    <string name="adjective_selfAssurance_independent">Independent
+
+    <string name="adjective_selfAssurance_certain">Certain
+
+    <string name="adjective_selfAssurance_confident">Confident
+
+    <string name="adjective_selfAssurance_selfAware">Self-Aware
+
+    <string name="adjective_selfAssurance_selfSufficient">Self-Sufficient
+
+    <string name="adjective_selfAssurance_instinctive">Instinctive
+
+    <string name="adjective_selfAssurance_intense">Intense
+
+    <string name="adjective_selfAssurance_controlling">Controlling
+
+    <string name="adjective_selfAssurance_stable">Stable
+
+    <string name="adjective_selfAssurance_persistent">Persistent
+
+
+    <string name="adjective_strategic_creative">Creative
+
+    <string name="adjective_strategic_clear">Clear
+
+    <string name="adjective_strategic_optionAware">Option-Aware
+
+    <string name="adjective_strategic_intuitive">Intuitive
+
+    <string name="adjective_strategic_futureOriented">Future-Oriented
+
+    <string name="adjective_strategic_anticipating">Anticipating
+
+    <string name="adjective_strategic_selective">Selective
+
+    <string name="adjective_strategic_thoughtful">Thoughtful
+
+    <string name="adjective_strategic_insightful">Insightful
+
+
+    <string name="adjective_significance_admired">Admired
+
+    <string name="adjective_significance_credible">Credible
+
+    <string name="adjective_significance_successful">Successful
+
+    <string name="adjective_significance_visible">Visible
+
+    <string name="adjective_significance_influential">Influential
+
+    <string name="adjective_significance_desirous">Desirous
+
+    <string name="adjective_significance_independent">Independent
+
+    <string name="adjective_significance_audienceOriented">Audience-Oriented
+
+    <string name="adjective_significance_professional">Professional
+
+    <string name="adjective_significance_exceptional">Exceptional
+
+
+    <string name="adjective_woo_charming">Charming
+
+    <string name="adjective_woo_interactive">Interactive
+
+    <string name="adjective_woo_sociallyProactive">Socially Proactive
+
+    <string name="adjective_woo_influential">Influential
+
+    <string name="adjective_woo_outgoing">Outgoing
+
+    <string name="adjective_woo_gregarious">Gregarious
+
+    <string name="adjective_woo_engaging">Engaging
+
+    <string name="adjective_woo_initiating">Initiating
+
+    <string name="adjective_woo_winsome">Winsome
+
+    <string name="adjective_woo_sociallyEnergetic">Socially Energetic
+
+    <string name="next">Next
+
+    <string name="undo">UNDO
+
+
+    <string name="X_secs">%1$d secs
+
+    <string name="restart_timer">Restart Timer
+
+    <string name="exit_activity">Exit Activity
+
+    <string name="all_set">All Set!
+
+    <string name="reset_themes">Reset Strengths
+
+    <string name="done">Done
+
+    <string name="more_info_button">More Info Button
+
+    <string name="chevron_right">Chevron Right
+
+    <string name="checkbox">Checkbox
+
+    <string name="effective_team_dynamic_logo">Effective Team Dynamic Logo
+
+    <string name="what_do_you_need_to_be_for_your_next_task">What do you need to be for your next task?
+
+    <string name="take_time_to_consider_how_you_can_be_a">Take time to consider how you can be a
+
+    <string name="for_your_next_task">for your next task…
+
+    <string name="start_timer">Start Timer
+
+    <string name="what_will_you_need_to_be_for_your_next_task">What will you need to be for your next task?
+
+    <string name="select_as_many_as_you_need">(Select as many as you need)
+
+    <string name="now_go_be_a">Now, go be a
+
+    <string name="for_your_next_task_exclaim">for your next task!
+
+    <string name="trust_the_process">Trust the Process
+
+
+    <string name="gray_cards_activity_name">My Mindset
+
+    <string name="hate_statements_activity_name">Personal Values
+
+    <string name="bring_statements_activity_name">Team Contributions
+
+    <string name="need_statements_activity_name">Personal Energizers
+
+
+    <string name="hate_achiever">a lack of diligence
+
+    <string name="hate_activator">waiting, wasting time
+
+    <string name="hate_adaptability">predictability
+
+    <string name="hate_analytical">things that are not or cannot be proven
+
+    <string name="hate_arranger">resistance to necessary change
+
+    <string name="hate_belief">anything that does not mesh/align with my beliefs
+
+    <string name="hate_command">passivity and avoidance
+
+    <string name="hate_communication">experience without expression
+
+    <string name="hate_competition">coming in second
+
+    <string name="hate_connectedness">an "us vs. them" mentality
+
+    <string name="hate_consistency">unnecessary customization
+
+    <string name="hate_context">when the past is forgotten
+
+    <string name="hate_deliberative">a rush to judgment
+
+    <string name="hate_developer">wasted or unrealized potential
+
+    <string name="hate_discipline">chaos and confusion, flying by the seat of one\'s pants
+
+    <string name="hate_empathy">those things that block or limit emotional expression
+
+    <string name="hate_focus">going off on misdirect tangents
+
+    <string name="hate_futuristic">contentment with status quo
+
+    <string name="hate_harmony">negative effects of friction
+
+    <string name="hate_ideation">doing what we have always done
+
+    <string name="hate_includer">cliques
+
+    <string name="hate_individualization">a one-size-fits-all approach
+
+    <string name="hate_input">not having things that would be useful to others
+
+    <string name="hate_intellection">a thoughtless approach to anything
+
+    <string name="hate_learner">knowing it all and know-it-alls
+
+    <string name="hate_maximizer">an obsession with weakness fixing
+
+    <string name="hate_positivity">negative people who drain the life out of others
+
+    <string name="hate_relator">the initial social discomfort of meeting someone new
+
+    <string name="hate_responsibility">disappointing others and being disappointed by others
+
+    <string name="hate_restorative">the idea that problems will disappear if they are ignored
+
+    <string name="hate_selfAssurance">others telling me what to do
+
+    <string name="hate_significance">being invisible to or ignored by others
+
+    <string name="hate_strategic">doing things the way we have always done them
+
+    <string name="hate_woo">a static or shrinking social network
+
+
+    <string name="bring_achiever">intensity and stamina
+
+    <string name="bring_activator">a catalytic sense of urgency
+
+    <string name="bring_adaptability">a willingness to follow the lead of change
+
+    <string name="bring_analytical">dispassionate thinking to emotional issues
+
+    <string name="bring_arranger">flexibility and interactivity
+
+    <string name="bring_belief">values stability, clarity, conviction
+
+    <string name="bring_command">emotional clarity
+
+    <string name="bring_communication">attention to messages that must be heard
+
+    <string name="bring_competition">an aspiration to be the best
+
+    <string name="bring_connectedness">an appreciation of the mystery and wonder of life and all creation
+
+    <string name="bring_consistency">rules and policies that promote cultural predictability
+
+    <string name="bring_context">accurate memories and valuable memorabilia
+
+    <string name="bring_deliberative">a thorough and conscientious approach
+
+    <string name="bring_developer">a commitment (time and energy) to human growth
+
+    <string name="bring_discipline">precision and detail orientation
+
+    <string name="bring_empathy">emotional intelligence
+
+    <string name="bring_focus">clarity through concentration and direction
+
+    <string name="bring_futuristic">previews, predictions, forecasts
+
+    <string name="bring_harmony">a peace-loving, conflict-resistant approach
+
+    <string name="bring_ideation">new and fresh perspectives
+
+    <string name="bring_includer">a high level of tolerance with and acceptance of diversity
+
+    <string name="bring_individualization">an understanding of people that is valuable for placement
+
+    <string name="bring_input">tangible tools that can facilitate growth and performance
+
+    <string name="bring_intellection">depth of understanding and wisdom
+
+    <string name="bring_learner">a learning perspective
+
+    <string name="bring_maximizer">a quality orientation
+
+    <string name="bring_positivity">contagious energy and enthusiasm
+
+    <string name="bring_relator">social depth and transparency
+
+    <string name="bring_responsibility">dependability and loyalty
+
+    <string name="bring_restorative">courage and creativity to problematic situations
+
+    <string name="bring_selfAssurance">a willingness to take necessary risks
+
+    <string name="bring_significance">a desire for wanting more
+
+    <string name="bring_strategic">creative anticipation, imagination, persistence
+
+    <string name="bring_woo">energy to social situations
+
+
+    <string name="need_achiever">freedom to work at my own pace
+
+    <string name="need_activator">less discussion, more action
+
+    <string name="need_adaptability">present pressures that demand an immediate response
+
+    <string name="need_analytical">time to think
+
+    <string name="need_arranger">a dynamic environment
+
+    <string name="need_belief">a cause or purpose for which to live
+
+    <string name="need_command">challenges and conflicts
+
+    <string name="need_communication">a sounding board, an audience
+
+    <string name="need_competition">peers for comparison and motivation
+
+    <string name="need_connectedness">to be part of something bigger than myself: a family, a team, an organization, a global community, or a cosmos
+
+    <string name="need_consistency">standard operating procedures
+
+    <string name="need_context">relevant background for discussions/decisions
+
+    <string name="need_deliberative">time to listen and think before being expected to speak
+
+    <string name="need_developer">someone to invest in
+
+    <string name="need_discipline">a structured and organized environment
+
+    <string name="need_empathy">freedom to laugh, cry, vent
+
+    <string name="need_focus">a goal to establish priorities
+
+    <string name="need_futuristic">opportunities to talk about the foreseen future
+
+    <string name="need_harmony">areas of agreement, common ground
+
+    <string name="need_ideation">freedom to explore possibilities without restraints or limits
+
+    <string name="need_includer">room for everyone
+
+    <string name="need_individualization">individual expectations that are created to fit each person
+
+    <string name="need_input">space to store the resources I naturally acquire
+
+    <string name="need_intellection">time for reflection and meditation
+
+    <string name="need_learner">exposure to new information and experiences
+
+    <string name="need_maximizer">quality be valued as much as quantity
+
+    <string name="need_positivity">freedom to experience the joy and drama of life
+
+    <string name="need_relator">time and opportunities for one-on-one interactions
+
+    <string name="need_responsibility">freedom to take ownership
+
+    <string name="need_restorative">problems that must be solved
+
+    <string name="need_selfAssurance">freedom to act unilaterally and independently
+
+    <string name="need_significance">an appreciative audience that will bring out my best
+
+    <string name="need_strategic">freedom to make mid-course corrections
+
+    <string name="need_woo">social variability
+
+
+
+    <string name="i_hate">&lt;i>I hate &lt;/i>
+
+    <string name="i_bring">&lt;i>I bring &lt;/i>
+
+    <string name="i_need">&lt;i>I am energized by having &lt;/i>
+
+
+    <string name="think_about_why_you_hate">Think about why you hate
+
+
+    <string name="think_about_a_time_when_you_contributed_to_your_team_by_bringing">Think about a time when you contributed to your team by bringing
+
+    <string name="how_did_it_impact_your_team_success">How did it impact your team success?
+
+
+    <string name="and_share_your_reason_with_your_teammates_exclaim">and share your reason with your teammates!
+
+    <string name="press_to_restart">Press to restart!
+
+
+    <string name="my_team_can_ellipses">My team can…
+
+    <string name="i_can_ellipses">I can…
+
+    <string name="my_team_can_space">My team can&#160;
+
+    <string name="i_can_space">I can&#160;
+
+    <string name="to_accommodate_this_my_team_should_ellipses">TO ACCOMMODATE THIS, MY TEAM SHOULD…
+
+    <string name="to_accommodate_this_I_should_ellipses">TO ACCOMMODATE THIS, I SHOULD…
+
+    <string name="to_accommodate_this_my_team_should_colon">TO ACCOMMODATE THIS, MY TEAM SHOULD:
+
+    <string name="to_accommodate_this_I_should_colon">TO ACCOMMODATE THIS, I SHOULD:
+
+    <string name="i_hate_all_caps">I HATE
+
+    <string name="redo">redo
+
+
+    <string name="gray_cards_activity_description">Discover which strength you should use to best accomplish your next task!
+
+    <string name="hate_statement_activity_description">Uncover what you value when working with groups!
+
+    <string name="bring_statement_activity_description">Establish how you can contribute to your teams!
+
+    <string name="need_statement_activity_description">Identify what energizes you when working in teams, and share with your teammates!
+
+    <string name="reset_themes_activity_description">Re-choose your five CliftonStrengths&lt;small>&lt;sup>®&lt;/sup>&lt;/small>!
+
+
+
+    <string name="choose_the_statement_that_resonates_most">Choose the statement that resonates most
+
+
+    <string name="specifically_how_can_you_use_this_to_help_your_team_reach_success">Specifically, how can you use this to help your team succeed?
+
+    <string name="what_are_some_actionable_steps_that_your_team_can_take_to_accommodate_this">What are some actionable steps that your team can take to accommodate this?
+
+    <string name="think_about_a_time_when_you_had">Think about a time when you had
+
+    <string name="and_share_how_it_contributed_to_a_successful_outcome_with_your_team">and share how it contributed to a successful outcome with your team!
+
+    <string name="what_are_some_actionable_steps_that_your_team_can_take_to_help_you_fully_contribute">What are some actionable steps that your team can take to help you fully contribute?
+
+
+
+
+

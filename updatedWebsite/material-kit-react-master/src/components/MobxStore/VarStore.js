@@ -38,7 +38,11 @@ class VarStore {
 		}
 	}
 	async loginFunc(){
-		var apiEndpoint = 'http://127.0.0.1:5000/login'
+		//Below endpoint is for testing
+		//var apiEndpoint = 'http://127.0.0.1:5000/login'
+
+		//Below endpoint is for prod/when on AWS
+		var apiEndpoint = 'http://3.82.207.245/login'
 		axios.post(apiEndpoint, {
 			'command': this.currentTraits,
 			'username': this.currentUser,
@@ -58,7 +62,11 @@ class VarStore {
 		}
 	}
 	async logoutFunc(){
-		var apiEndpoint = 'http://127.0.0.1:5000/logout'
+		//Below endpoint is for testing
+		//var apiEndpoint = 'http://127.0.0.1:5000/logout'
+
+		//Below endpoint is for prod/when on AWS
+		var apiEndpoint = 'http://3.82.207.245/logout'
 		axios.post(apiEndpoint, {
 			'command': 'logout'
 		})

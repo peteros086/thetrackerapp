@@ -58,9 +58,7 @@ export default function ActivityPage(props) {
     varSet.logoutFunc()
     setTimeout(function(){
       console.log(varSet.loggedIn);
-      if (!varSet.loggedIn){
-        props.history.replace('/')
-      }
+      props.history.replace('/')
     }, 200);
   }
   
@@ -68,8 +66,8 @@ export default function ActivityPage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
+        brand="Effective Team Dynamics"
+        //rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
           height: 200,

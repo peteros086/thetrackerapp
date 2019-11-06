@@ -1,10 +1,10 @@
 {
-  "name": "material-kit-react",
-  "homepage": "https://github.com/creativetimofficial/material-kit-react",
+  "name": "Effective Team Dynamics",
+  "homepage": "https://github.gatech.edu/psoens3/teamDynamicsWebsite",
   "authors": [
-    "creative-tim"
+    "Peter Oliveira Soens"
   ],
-  "description": "A Badass Material-UI Kit based on Material Design",
+  "description": "A team building tool",
   "main": "dist/index.js",
   "keywords": [
     "material",

@@ -40,6 +40,7 @@ export default function ActualLoginPage(props) {
   function onLogin(){
     console.log('_________')
     varSet.loginFunc()
+    console.log(props.history.location.pathname)
     setTimeout(function(){
       console.log(varSet.loggedIn);
       if (varSet.loggedIn){
@@ -47,6 +48,12 @@ export default function ActualLoginPage(props) {
         props.history.push('/landing-page')
       }
     }, 200);
+    setTimeout(function(){
+      if (varSet.loggedIn && props.history.location.pathname == '/'){
+        console.log('CHANGING 2')
+        props.history.push('/landing-page')
+      }
+    }, 2000);
   }
 
   return (
@@ -54,8 +61,8 @@ export default function ActualLoginPage(props) {
       <Header
         absolute
         color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
+        brand="Effective Team Dynamics"
+        //rightLinks={<HeaderLinks />}
         {...rest}
       />
       <div
@@ -72,38 +79,9 @@ export default function ActualLoginPage(props) {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-twitter"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-facebook"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-google-plus-g"} />
-                      </Button>
-                    </div>
+                    <h2>Login</h2>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  <p className={classes.divider}>     </p>
                   <CardBody>
                     <CustomInput
                       labelText="Username"

@@ -38,19 +38,18 @@ export default function LandingPage(props) {
   if(!varSet.loggedIn){
     setTimeout(function(){
       console.log(varSet.loggedIn);
-      if (!varSet.loggedIn){
-        console.log('BACK TO LOGIN')
-        props.history.replace('/')
-      }
+      console.log('BACK TO LOGIN')
+      props.history.replace('/')
+      
     }, 200);
   }else if(!varSet.hasChosenTraits){
     return (
       <div>
         <Header
           color="transparent"
-          routes={dashboardRoutes}
-          brand="Material Kit React"
-          rightLinks={<HeaderLinks />}
+          //routes={dashboardRoutes}
+          brand="Effective Team Dynamics"
+          //rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
             height: 400,

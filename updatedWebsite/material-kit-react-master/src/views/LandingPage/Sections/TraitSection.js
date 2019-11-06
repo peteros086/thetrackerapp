@@ -52,9 +52,9 @@ export default function TraitSection() {
       <div>
         <GridContainer>
 
-        {listItems}
 
-          <GridItem xs={12} sm={12} md={4}>
+          <GridItem>
+                  {listItems}
           <br/>
 
           {/*
@@ -89,7 +89,7 @@ export default function TraitSection() {
 
 
           </GridItem>        
-          <GridItem xs={12} sm={12} md={4}>
+          <GridItem>
           <br/>
               <Button
                 color="success"
