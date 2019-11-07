@@ -2,7 +2,7 @@ import { action, observable, decorate } from 'mobx';
 import axios from 'axios';
 
 class VarStore {
-	traitList = ['Achiever', 'Activator', 'Adaptability', 'Analytical', 'Arranger', 'Belief', 'Command', 'Communication', 'Competition', 'Connectedness', 'Consistency', 'Context', 'Deliberative', 'Developer', 'Discipline', 'Empathy', 'Focus', 'Futuristic', 'Harmony', 'Ideation', 'Includer', 'Individualization', 'Input', 'Intellection', 'Learner', 'Maximizer', 'Positivity', 'Relator', 'Responsibility', 'Restorative', 'Self-assurance', 'Significance', 'Strategic', 'Woo'];
+	traitList = ['Achiever', 'Activator', 'Adaptability', 'Analytical', 'Arranger', 'Belief', 'Command', 'Communication', 'Competition', 'Connectedness', 'Consistency', 'Context', 'Deliberative', 'Developer', 'Discipline', 'Empathy', 'Focus', 'Futuristic', 'Harmony', 'Ideation', 'Includer', 'Individualization', 'Input', 'Intellection', 'Learner', 'Maximizer', 'Positivity', 'Relator', 'Responsibility', 'Restorative', 'SelfAssurance', 'Significance', 'Strategic', 'Woo'];
 	temp = 'asdf';
 	currentTraits = [];
 	selectedTraits = [];
@@ -11,6 +11,8 @@ class VarStore {
 	currentPass = '';
 	visibleName = '';
 	loggedIn = false;
+	traitsWithDescriptions = [];
+	traitTabSection = [];
 	addTrait(currentOne) {
 		var traitName = currentOne.trait
 		if(!this.currentTraits.includes(traitName)){
@@ -31,6 +33,7 @@ class VarStore {
 				this.selectedTraits.push(inputList[i])
 			}
 			this.hasChosenTraits = true
+			this.getTraitInfo()
 			this.loginFunc()
 		}else{
 			this.hasChosenTraits = false
@@ -91,6 +94,23 @@ class VarStore {
 		this.currentTraits = []
 		this.hasChosenTraits = false
 	}
+	async getTraitInfo(){
+		//Below endpoint is for testing
+		var apiEndpoint = 'http://127.0.0.1:5000/returnTraits'
+
+		//Below endpoint is for prod/when on AWS
+		//var apiEndpoint = 'http://3.82.207.245/returnTraits'
+		console.log(this.currentTraits)
+		axios.post(apiEndpoint, {
+			'command': 'giveMeInfo',
+			'traitList': this.currentTraits
+		})
+			.then(response => this.traitInfoHelper(response));
+	}
+	traitInfoHelper(httpResponse){
+		console.log(httpResponse.data['traitList'])
+		this.traitsWithDescriptions = httpResponse.data['traitList']
+	}
 }
 
 decorate(VarStore, {
@@ -101,6 +121,7 @@ decorate(VarStore, {
     hasChosenTraits: observable,
     currentUser: observable,
     currentPass: observable,
+    traitsWithDescriptions: observable,
     addTrait: action,
     setTraits: action,
     loginFunc: action,
@@ -109,7 +130,9 @@ decorate(VarStore, {
     logoutHelper: action,
     setUsername: action,
     setPassword: action,
-    resetTraits: action
+    resetTraits: action,
+    getTraitInfo: action,
+    traitInfoHelper: action
 })
 
 const varSet = new VarStore();

@@ -35,6 +35,9 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
+
+
+
   if(!varSet.loggedIn){
     setTimeout(function(){
       console.log(varSet.loggedIn);
@@ -94,7 +97,6 @@ export default function LandingPage(props) {
       <ActivityPage history={props.history}/>
     ) 
   }
-
 }
 
 LandingPage = observer(LandingPage)

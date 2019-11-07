@@ -17,6 +17,7 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/prod
 import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
 import Button from "components/CustomButtons/Button.js";
+import Camera from "@material-ui/icons/Camera";
 
 
 
@@ -25,6 +26,7 @@ const useStyles = makeStyles(styles);
 export default function TraitSection() {
   const classes = useStyles();
   const traitArray = varSet.traitList
+
   var listItems = traitArray.map((trait, index) =>
     { if(varSet.currentTraits.includes({trait}.trait)){
         return(
@@ -51,43 +53,9 @@ export default function TraitSection() {
       </GridContainer>
       <div>
         <GridContainer>
-
-
           <GridItem>
                   {listItems}
-          <br/>
-
-          {/*
-            <InfoArea
-              title="Free Chat"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Chat}
-              iconColor="info"
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <InfoArea
-              title="Verified Users"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={VerifiedUser}
-              iconColor="success"
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <InfoArea
-              title="Fingerprint"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Fingerprint}
-              iconColor="danger"
-              vertical
-            />
-            */}
-
-
-
-
+            <br/>
           </GridItem>        
           <GridItem>
           <br/>

@@ -63,6 +63,7 @@ def getADJS():
 				finalNameADJ.append(thing[35:-3])
 				finalADJArray.append(currentTraits)
 				currentTraits = []
+	reader.close()
 	finalADJArray.pop(0)
 	return finalNameADJ, finalADJArray
 
@@ -79,6 +80,7 @@ def getDescriptions():
 			messyDescription = anotherVar[30:-10]
 			description = messyDescription.split('>')[1]
 			descriptionList.append(description)
+	reader.close()
 	return nameList, descriptionList
 
 def getHates():
@@ -97,6 +99,7 @@ def getHates():
 				descriptor = descripVar.split('>')[1]
 				#print(descriptor)
 				hateList.append(descriptor)
+	reader.close()
 	return nameList, hateList
 
 def getBrings():
@@ -112,6 +115,7 @@ def getBrings():
 				nameList.append(name)
 				bringDes = messyName.split('>')[1] 
 				bringList.append(bringDes)
+	reader.close()
 	return nameList, bringList
 
 def getNeeds():
@@ -129,6 +133,7 @@ def getNeeds():
 				needDescription = messyName.split('>')[1]
 				nameList.append(name)
 				needList.append(needDescription)
+	reader.close()
 	return nameList, needList
 
 def toJSON():
@@ -163,7 +168,7 @@ def toJSON():
 			'whoAmI':b[i],
 			'Adjectives':adjArr
 		})
-	with open('whoAmIText.json', 'w') as outfile:
+	with open('cliftonTraits.json', 'w') as outfile:
 		json.dump(data, outfile, indent=4)
 
 toJSON()

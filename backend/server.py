@@ -3,6 +3,7 @@ import os
 from flask_cors import CORS
 import flask_login
 import databaseFuncs
+import infoFuncs
 
 app = Flask(__name__, static_folder='./templates/build/static',
             template_folder='./templates')
@@ -51,6 +52,34 @@ def recordLogin():
 	else:
 		return jsonify({'ID': None, 'AUTH': flask_login.current_user.is_authenticated})
 
+@app.route('/logout', methods=['POST'])
+def logout():
+	if request.json['command'] == 'logout':
+		flask_login.logout_user()
+		authStatus = flask_login.current_user.is_authenticated
+		#authStatus should be False after logout occurs
+		print(authStatus)
+		httpResponse = jsonify({'ID': None, 'AUTH': authStatus})
+		return httpResponse
+	else: 
+		return 'an error occured'
+
+
+
+@app.route('/returnTraits', methods=['POST'])
+def returnTraits():
+	print(request.remote_addr)
+	print(request.json)
+	print(request.json['traitList'])
+	if request.json['command'] == 'giveMeInfo':
+		traitList = request.json['traitList']
+		httpResponse = jsonify(infoFuncs.returnSelectedTraits(traitList))
+		return httpResponse
+	badResponse = jsonify({'ERROR':'SOMETHING BAD HAPPENED'})
+	return badResponse
+
+
+
 
 
 """
@@ -77,18 +106,6 @@ def protected():
 	httpResponse = jsonify({'ID': 'tempID', 'AUTH': True})
 	return httpResponse
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-@app.route('/logout', methods=['POST'])
-def logout():
-	if request.json['command'] == 'logout':
-		flask_login.logout_user()
-		authStatus = flask_login.current_user.is_authenticated
-		#authStatus should be False after logout occurs
-		print(authStatus)
-		httpResponse = jsonify({'ID': None, 'AUTH': authStatus})
-		return httpResponse
-	else: 
-		return 'an error occured'
 
 
 if __name__ == "__main__":
