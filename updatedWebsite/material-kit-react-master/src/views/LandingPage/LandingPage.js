@@ -27,6 +27,8 @@ import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
 import TraitSection from './Sections/TraitSection.js'
 import ActivityPage from '../ActivityPage/ActivityPage.js'
+import UpdatedFooter from "components/Footer/UpdatedFooter.js";
+
 
 const dashboardRoutes = [];
 
@@ -48,29 +50,20 @@ export default function LandingPage(props) {
   }else if(!varSet.hasChosenTraits){
     return (
       <div>
-        <Header
-          color="transparent"
-          //routes={dashboardRoutes}
-          brand="Effective Team Dynamics"
-          //rightLinks={<HeaderLinks />}
-          fixed
-          changeColorOnScroll={{
-            height: 400,
-            color: "white"
-          }}
-          {...rest}
-        />
-        <Parallax filter image={require("assets/img/landing-bg.jpg")}>
+
+        <Parallax filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Welcome {varSet.visibleName}!</h1>
+                <h1 className={classes.title}>Select Your 5 Traits </h1>
+              {/*
                 <h4>
                   Every landing page needs a small description after the big bold
                   title, that{"'"}s why we added this text here. Add here all the
                   information that can make you or your product create the first
                   impression. 
                 </h4>
+              */}
                 <br />
               </GridItem>
             </GridContainer>
@@ -89,7 +82,7 @@ export default function LandingPage(props) {
 
           </div>
         </div>
-        <Footer />
+        <UpdatedFooter history={props.history}/>
       </div>
     );
   }else{

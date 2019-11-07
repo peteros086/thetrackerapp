@@ -40,6 +40,7 @@ def checkLogin(username, password):
 	c = conn.cursor()
 	c.execute('SELECT * FROM users WHERE user = ?', [username])
 	userList = c.fetchall()
+	print(username)
 	if len(userList) == 0:
 		#Username not in database
 		conn.commit()

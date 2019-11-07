@@ -96,10 +96,10 @@ class VarStore {
 	}
 	async getTraitInfo(){
 		//Below endpoint is for testing
-		var apiEndpoint = 'http://127.0.0.1:5000/returnTraits'
+		//var apiEndpoint = 'http://127.0.0.1:5000/returnTraits'
 
 		//Below endpoint is for prod/when on AWS
-		//var apiEndpoint = 'http://3.82.207.245/returnTraits'
+		var apiEndpoint = 'http://3.82.207.245/returnTraits'
 		console.log(this.currentTraits)
 		axios.post(apiEndpoint, {
 			'command': 'giveMeInfo',

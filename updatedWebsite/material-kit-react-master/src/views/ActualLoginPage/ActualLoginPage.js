@@ -21,11 +21,13 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/blackImage.jpg";
 
 //NEW IMPORTS
 import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
+import UpdatedFooter from "components/Footer/UpdatedFooter.js";
+
 
 const useStyles = makeStyles(styles);
 
@@ -58,13 +60,6 @@ export default function ActualLoginPage(props) {
 
   return (
     <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="Effective Team Dynamics"
-        //rightLinks={<HeaderLinks />}
-        {...rest}
-      />
       <div
         className={classes.pageHeader}
         style={{
@@ -129,7 +124,7 @@ export default function ActualLoginPage(props) {
             </GridItem>
           </GridContainer>
         </div>
-        <Footer whiteFont />
+        <UpdatedFooter whitefont history={props.history}/>
       </div>
     </div>
   );

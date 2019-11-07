@@ -24,6 +24,8 @@ import styles from "assets/jss/material-kit-react/views/profilePage.js";
 //NEW IMPORTS
 import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
+import UpdatedFooter from "components/Footer/UpdatedFooter.js";
+
 
 const useStyles = makeStyles(styles);
 
@@ -80,28 +82,19 @@ export default function ActivityPage(props) {
 
   return (
     <div>
-      <Header
-        color="transparent"
-        brand="Effective Team Dynamics"
-        //rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 200,
-          color: "white"
-        }}
-        {...rest}
-      />
-      <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+      <Parallax small filter image={require("assets/img/blackImage.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
             <div className={classes.description}>
+          {/*
               <Button size='lg' color='info' onClick={() => varSet.resetTraits()}>
                 Reset Traits
               </Button>
               <Button size='lg' color='info' onClick={() => onLogout()}>
                 Logout
               </Button>
+          */}
             </div>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
@@ -117,7 +110,7 @@ export default function ActivityPage(props) {
           </div>
         </div>
       </div>
-      <Footer />
+      <UpdatedFooter history={props.history}/>
     </div>
   );
 }

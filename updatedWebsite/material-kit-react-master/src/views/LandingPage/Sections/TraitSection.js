@@ -43,6 +43,8 @@ export default function TraitSection() {
   );
   return (
     <div className={classes.section}>
+
+    {/*
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Select Your Traits</h2>
@@ -51,6 +53,8 @@ export default function TraitSection() {
           </h5>
         </GridItem>
       </GridContainer>
+    */}
+      
       <div>
         <GridContainer>
           <GridItem>
@@ -59,6 +63,7 @@ export default function TraitSection() {
           </GridItem>        
           <GridItem>
           <br/>
+            {varSet.currentTraits.length ==5?
               <Button
                 color="success"
                 size="lg"
@@ -66,6 +71,17 @@ export default function TraitSection() {
               >
                 Continue
               </Button>
+              :
+              <Button
+                color="success"
+                size="lg"
+                disabled
+                onClick = {() => varSet.setTraits()}
+              >
+                Continue
+              </Button>
+            }
+
           </GridItem>
         </GridContainer>
       </div>
