@@ -63,9 +63,21 @@ def checkLogin(username, password):
 		return [False, "INCORRECT PASSWORD"]
 
 
+def updateTraits(username, traitList):
+	traitEntry = traitsToString(traitList)
+	conn = sqlite3.connect(nameOfDB)
+	c = conn.cursor()	
+	c.execute("""UPDATE users SET traits = ? WHERE user = ?""", [traitEntry, username])
+	conn.commit()
+	conn.close()
 
+def traitsToString(traitList):
+	traitString = ''
+	for i in range(0, len(traitList)):
+		traitString = traitString + traitList[i]
+		traitString = traitString + ':'
+	return traitString
 
-
-#addUser('testing', 'database', 'bruh')
-
+#addUser('wfwefwef', 'asdfasdf', 'bruh')
+#updateTraits('wfwefwef', ['asdf', 'fdsa', 'tttt'])
 
