@@ -68,9 +68,16 @@ def logout():
 
 @app.route('/returnTraits', methods=['POST'])
 def returnTraits():
-	print(request.remote_addr)
-	print(request.json)
-	print(request.json['traitList'])
+	#print(request.remote_addr)
+	#print(request.json)
+	traitList = request.json['traitList']
+	try:
+		currrentUsername = str(flask_login.current_user.id)
+		print(currrentUsername)
+		print('>>>>>>>>>>>>')
+		databaseFuncs.updateTraits(currrentUsername, traitList)
+	except Exception as e:
+		print(e)
 	if request.json['command'] == 'giveMeInfo':
 		traitList = request.json['traitList']
 		httpResponse = jsonify(infoFuncs.returnSelectedTraits(traitList))
@@ -82,7 +89,7 @@ def returnTraits():
 
 
 
-
+"""
 #____________________________________________
 #USE THE BELOW VERSION OF '/protected' ROUTE WHEN DONE MAKING FRONT END CHANGES
 #E.G. npm run build -> scp -r build /path/to/backed/templates -> python3 server.py	
@@ -93,9 +100,9 @@ def protected():
 	httpResponse = jsonify({'ID':flask_login.current_user.id, 'AUTH': flask_login.current_user.is_authenticated})
 	return httpResponse
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 """
+
+
 #____________________________________________
 #USE THIS VERSION OF '/protected' ROUTE IF RUNNING THE FRONT END SEPERAELY FROM REACT
 #E.G. npm run <------ while in front end folder
@@ -106,7 +113,7 @@ def protected():
 	httpResponse = jsonify({'ID': 'tempID', 'AUTH': True})
 	return httpResponse
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-"""
+
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=5000)
