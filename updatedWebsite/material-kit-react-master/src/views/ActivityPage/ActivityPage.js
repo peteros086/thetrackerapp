@@ -27,6 +27,7 @@ import varSet from 'components/MobxStore/VarStore.js'
 import UpdatedFooter from "components/Footer/UpdatedFooter.js";
 
 
+
 const useStyles = makeStyles(styles);
 
 export default function ActivityPage(props) {
@@ -46,6 +47,24 @@ export default function ActivityPage(props) {
       props.history.replace('/')
     }, 200);
   }
+
+  function goToPersonalValuePage(){
+    varSet.activityPage = 'personalValues'
+    varSet.updateActivityInfo()
+    props.history.push('/activity')
+  }
+
+  function goToTeamContributionPage(){
+    varSet.activityPage = 'teamContribution'
+    varSet.updateActivityInfo()
+    props.history.push('/activity')
+  }
+
+  function goToPersonalEnergizersPage(){
+    varSet.activityPage = 'personalEnergizers'
+    varSet.updateActivityInfo()
+    props.history.push('/activity')
+  }
   
   function createTabs(arrayElement){
         var placeHolder = {
@@ -54,22 +73,22 @@ export default function ActivityPage(props) {
               tabContent: (
                 <GridContainer justify="center">
                   <GridItem xs={12} sm={12} md={4}>
-                    <h3>DESCRIPTION:</h3>
-                      <p>
+                    <h3 className={classes.title}>DESCRIPTION:</h3>
+                      <h6>
                         {arrayElement['description']}
-                      </p>
-                    <h3>NEEDS:</h3>
-                      <p>
+                      </h6>
+                    <h3 className={classes.title}>NEEDS:</h3>
+                      <h6>
                         {arrayElement['needs']}
-                      </p>
-                    <h3>BRINGS:</h3>
-                      <p>
+                      </h6>
+                    <h3 className={classes.title}>BRINGS:</h3>
+                      <h6>
                         {arrayElement['brings']}
-                      </p>
-                    <h3>HATES:</h3>
-                      <p>
+                      </h6>
+                    <h3 className={classes.title}>HATES:</h3>
+                      <h6>
                         {arrayElement['hates']}
-                      </p>
+                      </h6>
                   </GridItem>
                 </GridContainer>
               )
@@ -82,11 +101,26 @@ export default function ActivityPage(props) {
 
   return (
     <div>
-      <Parallax small filter image={require("assets/img/blackImage.jpg")} />
+        <Parallax filter image={require("assets/img/blackImage.jpg")}>
+          <div className={classes.container}>
+          </div>
+        </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
             <div className={classes.description}>
+
+              <Button size='lg' color='info' onClick={() => goToPersonalValuePage()}>
+              Personal Values (I Hate section)
+              </Button>
+              <Button size='lg' color='info' onClick={() => goToTeamContributionPage()}>
+                Team Contribution (I Bring section)
+              </Button>
+              <Button size='lg' color='info' onClick={() => goToPersonalEnergizersPage()}>
+                Personal Energizers (I Need section)
+              </Button>
+              <br />
+
           {/*
               <Button size='lg' color='info' onClick={() => varSet.resetTraits()}>
                 Reset Traits

@@ -13,6 +13,13 @@ class VarStore {
 	loggedIn = false;
 	traitsWithDescriptions = [];
 	traitTabSection = [];
+	goToTimerPage = false;
+	descriptionForTimer = '';
+	currentTime = 30;
+	activityPage = '';
+	activityTitle = '';
+	activityParagraph = '';
+	activityTimerTitle = '';
 	addTrait(currentOne) {
 		var traitName = currentOne.trait
 		if(!this.currentTraits.includes(traitName)){
@@ -111,6 +118,21 @@ class VarStore {
 		console.log(httpResponse.data['traitList'])
 		this.traitsWithDescriptions = httpResponse.data['traitList']
 	}
+	updateActivityInfo(){
+		if(this.activityPage == 'personalValues'){
+			this.activityTitle = 'Whats worse?'
+			this.activityParagraph = 'I Hate '
+			this.activityTimerTitle = 'Talk about why you hate:'
+		}else if (this.activityPage == 'teamContribution'){
+			this.activityTitle = 'What resonates with you?'
+			this.activityParagraph = 'I Bring '	
+			this.activityTimerTitle = 'Talk about how you bring:'	
+		} else if (this.activityPage == 'personalEnergizers'){
+			this.activityTitle = 'What feels right?'
+			this.activityParagraph = 'I Need '	
+			this.activityTimerTitle = 'Talk about why you need:'
+		}
+	}
 }
 
 decorate(VarStore, {
@@ -122,6 +144,12 @@ decorate(VarStore, {
     currentUser: observable,
     currentPass: observable,
     traitsWithDescriptions: observable,
+    goToTimerPage: observable,
+    currentTime: observable,
+    activityPage: observable,
+    activityTitle: observable,
+    activityParagraph: observable,
+    activityTimerTitle: observable,
     addTrait: action,
     setTraits: action,
     loginFunc: action,
@@ -132,7 +160,8 @@ decorate(VarStore, {
     setPassword: action,
     resetTraits: action,
     getTraitInfo: action,
-    traitInfoHelper: action
+    traitInfoHelper: action,
+    updateActivityInfo: action,
 })
 
 const varSet = new VarStore();
