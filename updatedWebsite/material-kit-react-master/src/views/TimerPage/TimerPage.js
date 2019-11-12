@@ -38,24 +38,55 @@ export default function TimerPage(props) {
     varSet.goToTimerPage = false
   }
 
+  function nextPage(){
+    if(varSet.activityPage == 'personalValues'){
+      varSet.textPageTitle = 'What can your team do to help?'
+      varSet.textValue = 'My team can:'
+
+    }else if (varSet.activityPage == 'teamContribution'){
+      varSet.textPageTitle = 'Specifically, what will this let your team do?'
+      varSet.textValue = 'I can:'
+
+    }else if (varSet.activityPage == 'personalEnergizers'){
+      varSet.textPageTitle = 'What can your team do to help?'
+      varSet.textValue = 'My team can:'
+
+    }
+    
+    props.history.push('/actionableSteps')
+  }
+
   var cTime = 30
 
   function countdown(){
-    var tempTime = 31
-    cTime = tempTime
-    let timer = setInterval(() => { 
-      tempTime = tempTime -1
-      console.log('*********')
-      console.log(tempTime)
+    if (varSet.currentTime == 30){
+        varSet.timerbuttonText = 'Start Timer'
+        console.log(varSet.timerButtonText)
+    }
+    if(varSet.currentTime == 30 || varSet.currentTime ==0){
+      var tempTime = 31
       cTime = tempTime
-      console.log(cTime)
-      varSet.currentTime = cTime
-      console.log(varSet.currentTime)
-      if(tempTime == 0){
-        clearInterval(timer)
-      }
-    }, 1000);
-
+      let timer = setInterval(() => { 
+        tempTime = tempTime -1
+        console.log('*********')
+        console.log(tempTime)
+        cTime = tempTime
+        console.log(cTime)
+        varSet.currentTime = cTime
+        console.log(varSet.currentTime)
+        if(varSet.currentTime != 0){
+          varSet.timerButtonText = 'Reset Timer'
+          console.log(varSet.timerButtonText)
+        }
+        console.log(props.history.location.pathname)
+        if(props.history.location.pathname != '/activity'){
+          clearInterval(timer)
+        }
+        if(tempTime == 0){
+          clearInterval(timer)
+        }
+      }, 1000);
+    }
   }
 
   
@@ -63,30 +94,46 @@ export default function TimerPage(props) {
     return (
 
       <div>
-        <NewHeader
-          color="transparent"
-          brand="Material Kit React"
-          rightLinks={<HeaderLinks />}
-          fixed
-          changeColorOnScroll={{
-            height: 200,
-            color: "white"
-          }}
-          {...rest}
-        />
         <Parallax filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <h1 className={classes.title}>{varSet.activityTimerTitle}</h1>
                 <h4>{varSet.descriptionForTimer}</h4>
-                <h4>{varSet.currentTime}</h4>
-                <Button color="primary" size="lg" onClick = {() => countdown()} simple>
-                  Start Timer
-                </Button>
+
+              </GridItem>
+            </GridContainer>
+            <GridContainer justify="center">
+              <GridItem justify = 'center'>
+                <h1 className={classes.title}>{varSet.currentTime}</h1>
+              </GridItem>
+            </GridContainer>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={6}>
+              <br/>
+                {varSet.currentTime == 30 || varSet.currentTime == 0?
+                  <Button color="primary" size="lg" onClick = {() => countdown()} simple>
+                    {varSet.timerButtonText}
+                  </Button>
+                  :
+                  <Button color="primary" size="lg" onClick = {() => countdown()} simple>
+                    {varSet.timerButtonText}
+                  </Button>                  
+                }
+
                 <Button color="primary" size="lg" onClick = {() => backToLast()} simple>
                   go back
                 </Button>
+                {varSet.currentTime <= 25?
+                  <Button color="primary" size="lg" onClick = {() => nextPage()} simple>
+                    continue
+                  </Button>
+                  :
+                  <Button color="primary" size="lg" onClick = {() => nextPage()} simple disabled>
+                    continue
+                  </Button>
+                }
+
                 <br />
               </GridItem>
             </GridContainer>

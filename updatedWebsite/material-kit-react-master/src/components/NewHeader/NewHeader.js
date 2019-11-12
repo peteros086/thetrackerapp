@@ -20,6 +20,9 @@ import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 //NEW IMPORTS
 import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles(styles);
 
@@ -80,7 +83,31 @@ export default function NewHeader(props) {
           )}
         </div>
         <Hidden smDown implementation="css">
+      {/*
           {rightLinks}
+*/}
+            <List>
+              <ListItem className={classes.listItem}>
+                <Tooltip
+                  id="instagram-tooltip"
+                  title="Follow us on instagram"
+                  placement={window.innerWidth > 959 ? "top" : "left"}
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button
+                    color="transparent"
+                    href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                    target="_blank"
+                    className={classes.navLink}
+                  >
+                    <i className={classes.socialIcons + " fab fa-instagram"} />
+                  </Button>
+                </Tooltip>
+              </ListItem>
+            </List>
+
+          
+        }
         </Hidden>
         <Hidden mdUp>
           <IconButton
@@ -103,8 +130,10 @@ export default function NewHeader(props) {
           onClose={handleDrawerToggle}
         >
           <div className={classes.appResponsive}>
+          {/*
             {leftLinks}
             {rightLinks}
+          */}
           </div>
         </Drawer>
       </Hidden>

@@ -24,6 +24,7 @@ import varSet from 'components/MobxStore/VarStore.js'
 import UpdatedFooter from "components/Footer/UpdatedFooter.js";
 import TimerPage from 'views/TimerPage/TimerPage.js'
 import NewHeader from 'components/NewHeader/NewHeader.js';
+import WhoAmIPage from 'views/WhoAmIPage/WhoAmIPage.js'
 
 
 
@@ -37,39 +38,75 @@ export default function PersonalValuesPage(props) {
 
   function showValues(value){
     console.log(varSet.traitsWithDescriptions)
-    console.log(varSet.traitsWithDescriptions[0]['hates'])
-    varSet.goToTimerPage = true
-    varSet.descriptionForTimer = value
-    console.log(varSet.descriptionForTimer)
+    //console.log(varSet.traitsWithDescriptions[0]['hates'])
+    if(varSet.activityPage !== 'myMindSet1'){
+      varSet.goToTimerPage = true
+      varSet.goToWhoAmIPage = false
+      varSet.descriptionForTimer = value
+    }else{
+      varSet.goToWhoAmIPage = true
+      varSet.goToTimerPage = false
+      varSet.firstTrait = value
+      console.log(varSet.firstTrait)
+      for(var i=0; i<varSet.traitsWithDescriptions.length; i++){
+        if(varSet.firstTrait == varSet.traitsWithDescriptions[i]['name']){
+          varSet.firstTrait = varSet.traitsWithDescriptions[i]
+          console.log(varSet.firstTrait)
+        }else{
+          varSet.secondTraits.push(varSet.traitsWithDescriptions[i])
+          console.log(varSet.secondTraits)
+        }
+      }
+    }
+  }
+
+  function goBackAgain(){
+    varSet.goToWhoAmIPage = false
+    props.history.push('/landing-page')
   }
 
   function createHateButtons(hateValue){
     console.log(hateValue)
-    var currentHateValue = hateValue['hates']
-    console.log(currentHateValue)
     if(varSet.activityPage == 'personalValues'){
+      var passValue = hateValue['hates']
+      //console.log(passValue)
       return(
         <div>
-          <Button size='lg' color='info' onClick = {() => showValues(currentHateValue)} >
+          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['hates']}
           </Button>
           <br/>
         </div>
       )
     }else if (varSet.activityPage == 'teamContribution'){
+      var passValue = hateValue['brings']
+      //console.log(passValue)
       return(
         <div>
-          <Button size='lg' color='info' onClick = {() => showValues(currentHateValue)} >
+          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['brings']}
           </Button>
           <br/>
         </div>
       )
     }else if(varSet.activityPage == 'personalEnergizers'){
+      var passValue = hateValue['needs']
+      //console.log(passValue)
       return(
         <div>
-          <Button size='lg' color='info' onClick = {() => showValues(currentHateValue)} >
+          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['needs']}
+          </Button>
+          <br/>
+        </div>
+      )
+    }else if(varSet.activityPage == 'myMindSet1'){
+      var passValue = hateValue['name']
+      //console.log(passValue)
+      return(
+        <div>
+          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+            {varSet.activityParagraph}{hateValue['name']}
           </Button>
           <br/>
         </div>
@@ -79,20 +116,9 @@ export default function PersonalValuesPage(props) {
 
   var HateButtons = varSet.traitsWithDescriptions.map(createHateButtons)
 
-  if(!varSet.goToTimerPage){
+  if(!varSet.goToTimerPage && !varSet.goToWhoAmIPage){
     return (
       <div>
-        <NewHeader
-          color="transparent"
-          brand="Material Kit React"
-          rightLinks={<HeaderLinks />}
-          fixed
-          changeColorOnScroll={{
-            height: 200,
-            color: "white"
-          }}
-          {...rest}
-        />
         <Parallax filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
             <GridContainer>
@@ -110,6 +136,13 @@ export default function PersonalValuesPage(props) {
                 <GridItem xs={12} sm={12} md={6}>
                   {HateButtons}
                 </GridItem>
+                </GridContainer>
+                <GridContainer>
+                <GridItem>
+                  <Button color="primary" size="lg" onClick = {() => goBackAgain()}>
+                    go back
+                  </Button>
+                </GridItem>
               </GridContainer>
               
             </div>
@@ -118,9 +151,13 @@ export default function PersonalValuesPage(props) {
         <UpdatedFooter history={props.history}/>
       </div>
     );
-  }else{
+  }else if (varSet.goToTimerPage){
     return(
       <TimerPage history={props.history}/>
+    )
+  }else if (varSet.goToWhoAmIPage){
+    return(
+      <WhoAmIPage history={props.history}/>
     )
   }
 

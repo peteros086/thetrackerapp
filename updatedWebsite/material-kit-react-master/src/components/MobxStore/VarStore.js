@@ -20,6 +20,12 @@ class VarStore {
 	activityTitle = '';
 	activityParagraph = '';
 	activityTimerTitle = '';
+	timerButtonText = 'Start Timer';
+	textValue: '';
+	textPageTitle = '';
+	goToWhoAmIPage = false;
+	firstTrait = '';
+	secondTraits = [];
 	addTrait(currentOne) {
 		var traitName = currentOne.trait
 		if(!this.currentTraits.includes(traitName)){
@@ -131,6 +137,10 @@ class VarStore {
 			this.activityTitle = 'What feels right?'
 			this.activityParagraph = 'I Need '	
 			this.activityTimerTitle = 'Talk about why you need:'
+		}else if (this.activityPage == 'myMindSet1'){
+			this.activityTitle = 'For your next task, which strength will be most useful?'
+			this.activityParagraph = ''	
+			this.activityTimerTitle = 'Consider how you can be a '
 		}
 	}
 }
@@ -150,6 +160,12 @@ decorate(VarStore, {
     activityTitle: observable,
     activityParagraph: observable,
     activityTimerTitle: observable,
+    timerButtonText: observable,
+    textValue: observable,
+    textPageTitle: observable,
+    goToWhoAmIPage: observable,
+    firstTrait: observable,
+    secondTraits: observable,
     addTrait: action,
     setTraits: action,
     loginFunc: action,

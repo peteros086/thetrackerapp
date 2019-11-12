@@ -65,6 +65,12 @@ export default function ActivityPage(props) {
     varSet.updateActivityInfo()
     props.history.push('/activity')
   }
+
+  function goToWhoAmIPage(){
+    varSet.activityPage = 'myMindSet1'
+    varSet.updateActivityInfo()
+    props.history.push('/activity')
+  }
   
   function createTabs(arrayElement){
         var placeHolder = {
@@ -101,7 +107,7 @@ export default function ActivityPage(props) {
 
   return (
     <div>
-        <Parallax filter image={require("assets/img/blackImage.jpg")}>
+        <Parallax small filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
           </div>
         </Parallax>
@@ -118,6 +124,9 @@ export default function ActivityPage(props) {
               </Button>
               <Button size='lg' color='info' onClick={() => goToPersonalEnergizersPage()}>
                 Personal Energizers (I Need section)
+              </Button>
+              <Button size='lg' color='info' onClick={() => goToWhoAmIPage()}>
+                WHO AM I ACTIVITY
               </Button>
               <br />
 

@@ -1,0 +1,87 @@
+import React from "react";
+// nodejs library that concatenates classes
+import classNames from "classnames";
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+
+// @material-ui/icons
+
+// core components
+import Header from "components/Header/Header.js";
+import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Button from "components/CustomButtons/Button.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
+import Parallax from "components/Parallax/Parallax.js";
+
+import styles from "assets/jss/material-kit-react/views/landingPage.js";
+
+//NEW IMPORTS
+import {observer} from "mobx-react"
+import varSet from 'components/MobxStore/VarStore.js'
+import UpdatedFooter from "components/Footer/UpdatedFooter.js";
+
+const dashboardRoutes = [];
+
+const useStyles = makeStyles(styles);
+
+export default function WhoAmIPage(props) {
+  const classes = useStyles();
+  const { ...rest } = props;
+
+  function anotherGoBackFunc(){
+    varSet.goToWhoAmIPage = false
+    props.history.push('/landing-page')
+  }
+
+  function makeDescriptiveButtons(traitName){
+    //var traitNoun = traitName['whoAmI']
+    return(
+        <div>
+          <Button size='lg' color='info' onClick = {() => console.log(traitName)} >
+            {traitName}
+          </Button>
+          <br/>
+        </div>
+      )
+  }
+
+  var nouns = varSet.firstTrait['whoAmI'].map(makeDescriptiveButtons)
+
+    return (
+     <div>
+
+        <Parallax filter image={require("assets/img/blackImage.jpg")}>
+          <div className={classes.container}>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={6}>
+                <h1 className={classes.title}>What do you need to be for your next task?</h1>
+                <br />
+              </GridItem>
+            </GridContainer>
+          </div>
+        </Parallax>
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <div className={classes.container}>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={6}>
+                {nouns}
+                <br/>
+              </GridItem>
+            </GridContainer>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={6}>
+                  <Button color="primary" size="lg" onClick = {() => anotherGoBackFunc()}>
+                    go back
+                  </Button>
+              </GridItem>
+            </GridContainer>
+          </div>
+        </div>
+        <UpdatedFooter history={props.history}/>
+      </div>
+    );
+}
+
+WhoAmIPage = observer(WhoAmIPage)
