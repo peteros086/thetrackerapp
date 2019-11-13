@@ -7,12 +7,9 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 
 // core components
-import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
@@ -35,11 +32,19 @@ export default function WhoAmIPage(props) {
     props.history.push('/landing-page')
   }
 
+  function selectNoun(noun){
+    varSet.firstNoun = noun
+    console.log(varSet.firstNoun)
+    varSet.whoAmIAdjs = []
+    varSet.whoAmINames = []
+    props.history.push('/secondCardActivity')
+  }
+
   function makeDescriptiveButtons(traitName){
     //var traitNoun = traitName['whoAmI']
     return(
         <div>
-          <Button size='lg' color='info' onClick = {() => console.log(traitName)} >
+          <Button size='lg' color='info' onClick = {() => selectNoun(traitName)} >
             {traitName}
           </Button>
           <br/>
@@ -65,7 +70,8 @@ export default function WhoAmIPage(props) {
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem>
+                <br/>
                 {nouns}
                 <br/>
               </GridItem>

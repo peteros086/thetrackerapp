@@ -5,19 +5,13 @@ import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import Camera from "@material-ui/icons/Camera";
-import Palette from "@material-ui/icons/Palette";
-import Favorite from "@material-ui/icons/Favorite";
+
 // core components
-import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
-
-import profile from "assets/img/faces/christian.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
@@ -129,18 +123,11 @@ export default function ActivityPage(props) {
                 WHO AM I ACTIVITY
               </Button>
               <br />
-
-          {/*
-              <Button size='lg' color='info' onClick={() => varSet.resetTraits()}>
-                Reset Traits
-              </Button>
-              <Button size='lg' color='info' onClick={() => onLogout()}>
-                Logout
-              </Button>
-          */}
             </div>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+              
+              {/*
                 <NavPills
                   alignCenter
                   color="primary"
@@ -148,6 +135,8 @@ export default function ActivityPage(props) {
                     asdf
                   }
                 />
+              */}
+
               </GridItem>
             </GridContainer>
           </div>

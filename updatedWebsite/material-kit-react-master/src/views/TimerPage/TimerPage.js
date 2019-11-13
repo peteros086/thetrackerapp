@@ -36,31 +36,42 @@ export default function TimerPage(props) {
 
   function backToLast(){
     varSet.goToTimerPage = false
+    varSet.goToWhoAmIPage = false
+    varSet.whoAmIAdjs = []
+    varSet.whoAmINames = []
+    varSet.whoAmILines = []
+    props.history.push('/landing-page')
   }
 
   function nextPage(){
+    console.log(varSet.activityPage)
     if(varSet.activityPage == 'personalValues'){
       varSet.textPageTitle = 'What can your team do to help?'
       varSet.textValue = 'My team can:'
-
+      props.history.push('/actionableSteps')
     }else if (varSet.activityPage == 'teamContribution'){
       varSet.textPageTitle = 'Specifically, what will this let your team do?'
       varSet.textValue = 'I can:'
-
+      props.history.push('/actionableSteps')
     }else if (varSet.activityPage == 'personalEnergizers'){
       varSet.textPageTitle = 'What can your team do to help?'
       varSet.textValue = 'My team can:'
-
+      props.history.push('/actionableSteps')
+    }else if (varSet.activityPage == 'myMindSet1'){
+      varSet.goToWhoAmIPage = false
+      props.history.push('/landing-page')
     }
-    
-    props.history.push('/actionableSteps')
   }
 
   var cTime = 30
 
   function countdown(){
+    if(varSet.timerButtonText == 'Reset Timer' && varSet.currentTime != 30){
+      varSet.shouldResetTimer = true
+      varSet.timerButtonText = 'Start Timer'
+    }
     if (varSet.currentTime == 30){
-        varSet.timerbuttonText = 'Start Timer'
+        varSet.timerButtonText = 'Start Timer'
         console.log(varSet.timerButtonText)
     }
     if(varSet.currentTime == 30 || varSet.currentTime ==0){
@@ -74,7 +85,7 @@ export default function TimerPage(props) {
         console.log(cTime)
         varSet.currentTime = cTime
         console.log(varSet.currentTime)
-        if(varSet.currentTime != 0){
+        if(varSet.currentTime != 0 && varSet.shouldResetTimer != true){
           varSet.timerButtonText = 'Reset Timer'
           console.log(varSet.timerButtonText)
         }
@@ -84,6 +95,11 @@ export default function TimerPage(props) {
         }
         if(tempTime == 0){
           clearInterval(timer)
+        }
+        if(varSet.shouldResetTimer == true){
+          clearInterval(timer)
+          varSet.currentTime = 30
+          varSet.shouldResetTimer = false
         }
       }, 1000);
     }

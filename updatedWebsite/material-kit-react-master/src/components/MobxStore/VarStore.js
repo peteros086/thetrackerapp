@@ -25,7 +25,14 @@ class VarStore {
 	textPageTitle = '';
 	goToWhoAmIPage = false;
 	firstTrait = '';
+	firstNoun = '';
 	secondTraits = [];
+	secondBackupTraits = [];
+	whoAmINames = [];
+	whoAmIAdjs = [];
+	whoAmILines = [];
+	shouldResetTimer = false;
+	testVar = 'a';
 	addTrait(currentOne) {
 		var traitName = currentOne.trait
 		if(!this.currentTraits.includes(traitName)){
@@ -125,6 +132,8 @@ class VarStore {
 		this.traitsWithDescriptions = httpResponse.data['traitList']
 	}
 	updateActivityInfo(){
+		this.currentTime = 30
+		this.goToTimerPage = false
 		if(this.activityPage == 'personalValues'){
 			this.activityTitle = 'Whats worse?'
 			this.activityParagraph = 'I Hate '
@@ -143,6 +152,19 @@ class VarStore {
 			this.activityTimerTitle = 'Consider how you can be a '
 		}
 	}
+	selectLines(currentOne) {
+      var tempLine = currentOne
+      this.testVar = tempLine
+      console.log(this.testVar)
+      if(!this.whoAmILines.includes(tempLine)){
+        this.whoAmILines.push(tempLine)
+      }else{
+        var lineIndex = this.whoAmILines.indexOf(tempLine)
+        this.whoAmILines.splice(lineIndex, 1)
+      }
+      console.log(this.whoAmILines)
+      console.log(tempLine)
+  }
 }
 
 decorate(VarStore, {
@@ -165,7 +187,13 @@ decorate(VarStore, {
     textPageTitle: observable,
     goToWhoAmIPage: observable,
     firstTrait: observable,
+    firstNoun: observable,
     secondTraits: observable,
+    secondBackupTraits: observable,
+    whoAmINames: observable,
+    whoAmIAdjs: observable,
+    shouldResetTimer: observable,
+    testVar: observable,
     addTrait: action,
     setTraits: action,
     loginFunc: action,
@@ -178,6 +206,7 @@ decorate(VarStore, {
     getTraitInfo: action,
     traitInfoHelper: action,
     updateActivityInfo: action,
+    selectLines: observable,
 })
 
 const varSet = new VarStore();
