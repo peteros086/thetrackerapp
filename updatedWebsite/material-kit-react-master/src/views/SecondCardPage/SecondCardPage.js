@@ -20,6 +20,7 @@ import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
 import UpdatedFooter from "components/Footer/UpdatedFooter.js";
 import ButtonSection from './ButtonSection/ButtonSection.js'
+import SecondMiddleSec from './SecondMiddleSec/SecondMiddleSec.js'
 
 const dashboardRoutes = [];
 
@@ -38,12 +39,9 @@ export default function SecondCardPage(props) {
   function makeDescriptiveButtons(traitName){
     //var traitNoun = traitName['whoAmI']
     return(
-        <div>
           <Button size='lg' color='info' onClick = {() => getSecondaryButtons(traitName)} >
             {traitName}
           </Button>
-          <br/>
-        </div>
       )
   }
 
@@ -84,16 +82,7 @@ export default function SecondCardPage(props) {
             <div className={classes.container}>
               <GridContainer>
                 <GridItem>
-                  <br/>
-                  {nouns}
-                  <br/>
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem>
-                    <Button color="primary" size="lg" onClick = {() => anotherGoBackFunc()}>
-                      go back
-                    </Button>
+                  <SecondMiddleSec history={props.history} />
                 </GridItem>
               </GridContainer>
             </div>
@@ -102,38 +91,6 @@ export default function SecondCardPage(props) {
         </div>
     );
   }else{
-
-
-  {/*
-    function makeTertiaryButtons(adj){
-      var tempLine = adj.concat(' ', varSet.firstNoun)
-      console.log(tempLine)
-      console.log(varSet.whoAmILines)
-      console.log(varSet.whoAmILines.includes(tempLine))
-      if(varSet.whoAmILines.includes(tempLine)){
-        return(
-          <div>
-            <Button size='lg' color='danger' onClick = {() => varSet.selectLines(tempLine)} >
-              {tempLine}
-            </Button>
-            <br/>
-          </div>
-        )
-      }else{
-        return(
-          <div>
-            <Button size='lg' color='info' onClick = {() => varSet.selectLines(tempLine)} >
-              {tempLine}
-            </Button>
-            <br/>
-          </div>
-        )
-      }
-
-    }
-    var thirdButtons = varSet.whoAmIAdjs.map(makeTertiaryButtons)
-  */}
-
 
     var thirdButtons = varSet.whoAmIAdjs.map((trait, index) => {
       var tempLine = trait.concat(' ', varSet.firstNoun)
@@ -195,19 +152,7 @@ export default function SecondCardPage(props) {
             <div className={classes.container}>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
-                  <br/>
-                  <ButtonSection history={props.history}/>
-                  <br/>
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                    <Button color="primary" size="lg" onClick = {() => anotherGoBackFunc()}>
-                      go back
-                    </Button>
-                     <Button color="primary" size="lg" onClick = {() => continueFunc()}>
-                      Continue
-                    </Button>
+                  <ButtonSection history={props.history} extraData = {varSet.testVar}/>
                 </GridItem>
               </GridContainer>
             </div>

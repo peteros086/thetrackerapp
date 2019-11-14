@@ -5,6 +5,8 @@ import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import Camera from "@material-ui/icons/Camera";
+import Dashboard from "@material-ui/icons/Dashboard";
+import Schedule from "@material-ui/icons/Schedule";
 
 // core components
 import Button from "components/CustomButtons/Button.js";
@@ -61,6 +63,7 @@ export default function ActivityPage(props) {
   }
 
   function goToWhoAmIPage(){
+    console.log(classes)
     varSet.activityPage = 'myMindSet1'
     varSet.updateActivityInfo()
     props.history.push('/activity')
@@ -103,13 +106,16 @@ export default function ActivityPage(props) {
     <div>
         <Parallax small filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
+          <h1 className={classes.title}>
+          Effective Team Dynamics
+          </h1>
           </div>
         </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
+{/*
             <div className={classes.description}>
-
               <Button size='lg' color='info' onClick={() => goToPersonalValuePage()}>
               Personal Values (I Hate section)
               </Button>
@@ -124,6 +130,7 @@ export default function ActivityPage(props) {
               </Button>
               <br />
             </div>
+*/}
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
               
@@ -136,6 +143,77 @@ export default function ActivityPage(props) {
                   }
                 />
               */}
+
+
+            <NavPills
+                color="rose"
+                horizontal={{
+                  tabsGrid: { xs: 12, sm: 4, md: 4 },
+                  contentGrid: { xs: 12, sm: 8, md: 8 }
+                }}
+                tabs={[
+                  {
+                    tabButton: "My Mindset",
+                    tabIcon: Camera,
+                    tabContent: (
+                      <span>
+                        <p>
+                          Discover which strength you should use to best accomplish your next task!
+                        </p>
+                        <br />
+                        <Button size='lg' color='info' onClick={() => goToWhoAmIPage()}>
+                          START
+                        </Button>
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Personal Values",
+                    tabIcon: Camera,
+                    tabContent: (
+                      <span>
+                        <p>
+                          Uncover what you value when working with groups!
+                        </p>
+                        <br />
+                        <Button size='lg' color='info' onClick={() => goToPersonalValuePage()}>
+                          START
+                        </Button>
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Team Contribution",
+                    tabIcon: Camera,
+                    tabContent: (
+                      <span>
+                        <p>
+                          Establish how you can contribute to your teams!
+                        </p>
+                        <br />
+                        <Button size='lg' color='info' onClick={() => goToTeamContributionPage()}>
+                          START
+                        </Button>
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Personal Energizers",
+                    tabIcon: Camera,
+                    tabContent: (
+                      <span>
+                        <p>
+                          Identify what energizes you when working in teams, and share with your teammates!
+                        </p>
+                        <br />
+                        <Button size='lg' color='info' onClick={() => goToPersonalEnergizersPage()}>
+                          START
+                        </Button>
+                      </span>
+                    )
+                  }
+                ]}
+              />
 
               </GridItem>
             </GridContainer>

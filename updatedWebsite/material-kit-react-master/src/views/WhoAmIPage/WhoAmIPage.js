@@ -18,6 +18,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
 import UpdatedFooter from "components/Footer/UpdatedFooter.js";
+import MiddleSection from './MiddleSection/MiddleSection.js'
 
 const dashboardRoutes = [];
 
@@ -71,16 +72,7 @@ export default function WhoAmIPage(props) {
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
-                <br/>
-                {nouns}
-                <br/>
-              </GridItem>
-            </GridContainer>
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
-                  <Button color="primary" size="lg" onClick = {() => anotherGoBackFunc()}>
-                    go back
-                  </Button>
+                <MiddleSection history={props.history}/>
               </GridItem>
             </GridContainer>
           </div>

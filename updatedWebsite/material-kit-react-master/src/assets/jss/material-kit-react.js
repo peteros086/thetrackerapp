@@ -81,10 +81,13 @@ const dangerColor = "#545454";
 //const successColor = "#4caf50";
 const successColor = "#F2B200";
 
+//const roseColor = "#e91e63";
+const roseColor = "#1879DB";
+
 const warningColor = "#ff9800";
 
 
-const roseColor = "#e91e63";
+
 const grayColor = "#999999";
 
 const primaryBoxShadow = {

@@ -18,8 +18,34 @@ import Button from "components/CustomButtons/Button.js";
 
 const useStyles = makeStyles(styles);
 
-export default function ButtonSection() {
+export default function ButtonSection(props) {
   const classes = useStyles();
+  const { ...rest } = props;
+
+
+    function continueFunc(){
+      varSet.descriptionForTimer = linesToText(varSet.whoAmILines)
+      varSet.goToTimerPage = true
+      console.log(varSet.whoAmILines)
+      props.history.push('/activity')
+    }
+
+    function anotherGoBackFunc(){
+      varSet.goToWhoAmIPage = false
+      varSet.whoAmILines = []
+      props.history.push('/landing-page')
+    }
+
+    function linesToText(inputArr){
+      var totalLines = ''
+      for(var j = 0; j < inputArr.length; j++){
+        totalLines.concat(inputArr[j])
+        console.log(inputArr[j])
+      }
+      console.log(totalLines)
+      totalLines = inputArr.join('-----')
+      return totalLines
+    }
 
     var thirdButtons = varSet.whoAmIAdjs.map((trait, index) => {
       var tempLine = trait.concat(' ', varSet.firstNoun)
@@ -49,12 +75,14 @@ export default function ButtonSection() {
   return (
     <div className={classes.section}>
       <div>
-        <GridContainer>
-          <GridItem>
             {thirdButtons}
             <br/>
-          </GridItem>        
-        </GridContainer>
+            <Button color="primary" size="lg" onClick = {() => anotherGoBackFunc()}>
+              go back
+            </Button>
+             <Button color="primary" size="lg" onClick = {() => continueFunc()}>
+              Continue
+            </Button>
       </div>
     </div>
   );
