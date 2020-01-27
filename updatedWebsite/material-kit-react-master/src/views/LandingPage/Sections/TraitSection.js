@@ -25,12 +25,12 @@ export default function TraitSection() {
   var listItems = traitArray.map((trait, index) =>
     { if(varSet.currentTraits.includes({trait}.trait)){
         return(
-          <Button size='lg' color='danger' key={index} onClick={() => varSet.addTrait({trait})}>
+          <Button size='lg' id={trait} color='danger' key={index} onClick={() => varSet.addTrait({trait})}>
             {trait}
           </Button>
       )}else{
         return(
-          <Button size='lg' color='info' key={index} onClick={() => varSet.addTrait({trait})}>
+          <Button size='lg' id={trait} color='info' key={index} onClick={() => varSet.addTrait({trait})}>
             {trait}
           </Button>
         )}
@@ -51,6 +51,7 @@ export default function TraitSection() {
               <Button
                 color="success"
                 size="lg"
+                id="submit"
                 onClick = {() => varSet.setTraits()}
               >
                 Continue
@@ -59,6 +60,7 @@ export default function TraitSection() {
               <Button
                 color="success"
                 size="lg"
+                id="submit"
                 disabled
                 onClick = {() => varSet.setTraits()}
               >

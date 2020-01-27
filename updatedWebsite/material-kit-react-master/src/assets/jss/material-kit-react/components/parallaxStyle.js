@@ -29,7 +29,7 @@ const parallaxStyle = {
   },
   small: {
     //height: "380px"
-    height: "200px"
+    height: "300px"
   }
 };
 

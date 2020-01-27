@@ -18,11 +18,15 @@ import SecondCardPage from "views/SecondCardPage/SecondCardPage.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={hist}>
     <Switch>
       <Route path="/landing-page" component={LandingPage} />
       <Route path="/activity" component={PersonalValuesPage} />
+      
+      {/*
       <Route path="/components" component={Components} />
+      */}
+
       <Route path="/actionableSteps" component={ActionableStepsPage} />
       <Route path="/secondCardActivity" component={SecondCardPage} />
 

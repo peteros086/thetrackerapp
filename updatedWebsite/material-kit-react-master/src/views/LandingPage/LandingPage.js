@@ -32,10 +32,7 @@ export default function LandingPage(props) {
 
   if(!varSet.loggedIn){
     setTimeout(function(){
-      console.log(varSet.loggedIn);
-      console.log('BACK TO LOGIN')
       props.history.replace('/')
-      
     }, 200);
   }else if(!varSet.hasChosenTraits){
     return (

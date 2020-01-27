@@ -142,7 +142,7 @@ export default function SecondCardPage(props) {
             <div className={classes.container}>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
-                  <h1 className={classes.title}>What will you need to be for your next task? {varSet.whoAmIAdjs[0]}</h1>
+                  <h1 className={classes.title}>What will you need to be for your next task?</h1>
                   <br />
                 </GridItem>
               </GridContainer>

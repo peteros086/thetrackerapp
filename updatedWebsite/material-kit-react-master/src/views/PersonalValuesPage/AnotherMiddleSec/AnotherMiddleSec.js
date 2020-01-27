@@ -2,11 +2,6 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-
-// core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 //NEW IMPORTS
@@ -59,7 +54,7 @@ export default function AnotherMiddleSec(props) {
       var passValue = hateValue['hates']
       //console.log(passValue)
       return(
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['hates']}
           </Button>
       )
@@ -67,7 +62,7 @@ export default function AnotherMiddleSec(props) {
       var passValue = hateValue['brings']
       //console.log(passValue)
       return(
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['brings']}
           </Button>
       )
@@ -75,7 +70,7 @@ export default function AnotherMiddleSec(props) {
       var passValue = hateValue['needs']
       //console.log(passValue)
       return(
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['needs']}
           </Button>
       )
@@ -83,7 +78,7 @@ export default function AnotherMiddleSec(props) {
       var passValue = hateValue['name']
       //console.log(passValue)
       return(
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['name']}
           </Button>
       )
@@ -97,7 +92,7 @@ export default function AnotherMiddleSec(props) {
       <div>
             {HateButtons}
             <br/>
-            <Button color="primary" size="lg" onClick = {() => goBackAgain()}>
+            <Button color="primary" size="lg" id='backButton' onClick = {() => goBackAgain()}>
               go back
             </Button>
       </div>

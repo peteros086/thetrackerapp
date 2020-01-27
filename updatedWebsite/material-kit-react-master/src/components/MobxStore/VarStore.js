@@ -33,6 +33,7 @@ class VarStore {
 	whoAmILines = [];
 	shouldResetTimer = false;
 	testVar = 'a';
+	loadingResponse = false;
 	addTrait(currentOne) {
 		var traitName = currentOne.trait
 		if(!this.currentTraits.includes(traitName)){
@@ -47,7 +48,7 @@ class VarStore {
 	setTraits() {
 		var i
 		var inputList = this.currentTraits
-		if(inputList.length ==5){
+		if(inputList.length === 5){
 			this.selectedTraits = []
 			for(i = 0; i <inputList.length; i++){
 				this.selectedTraits.push(inputList[i])
@@ -62,10 +63,11 @@ class VarStore {
 	}
 	async loginFunc(){
 		//Below endpoint is for testing
-		var apiEndpoint = 'http://127.0.0.1:5000/login'
+		//var apiEndpoint = 'http://127.0.0.1:5000/login'
 
 		//Below endpoint is for prod/when on AWS
-		//var apiEndpoint = 'http://3.82.207.245/login'
+		var apiEndpoint = 'http://3.82.207.245/login'
+		this.loadingResponse = true
 		axios.post(apiEndpoint, {
 			'command': this.currentTraits,
 			'username': this.currentUser,
@@ -74,34 +76,30 @@ class VarStore {
 			.then(response => this.loginHelper(response));
 	}
 	async loginHelper(serverResponse){
-		console.log(serverResponse.data)
 		var authenticationStatus = serverResponse.data['AUTH']
-		console.log(authenticationStatus)
+		this.loadingResponse = false
+		console.log(this.loadingResponse)
 		if(authenticationStatus){
 			this.loggedIn = true
 			this.visibleName = serverResponse.data['ID']
-			console.log(this.loggedIn)
-			console.log(this.visibleName)
 		}
 	}
 	async logoutFunc(){
 		//Below endpoint is for testing
-		var apiEndpoint = 'http://127.0.0.1:5000/logout'
+		//var apiEndpoint = 'http://127.0.0.1:5000/logout'
 
 		//Below endpoint is for prod/when on AWS
-		//var apiEndpoint = 'http://3.82.207.245/logout'
+		var apiEndpoint = 'http://3.82.207.245/logout'
 		axios.post(apiEndpoint, {
 			'command': 'logout'
 		})
 			.then(response => this.logoutHelper(response));
 	}
 	async logoutHelper(responseFromServer){
-		console.log(responseFromServer)
 		var authenticationStatus = responseFromServer['AUTH']
 		if(!authenticationStatus){
 			this.loggedIn = false
 			this.visibleName = ''
-			console.log(this.loggedIn)
 		}
 	}
 	setUsername(newName){
@@ -116,11 +114,10 @@ class VarStore {
 	}
 	async getTraitInfo(){
 		//Below endpoint is for testing
-		var apiEndpoint = 'http://127.0.0.1:5000/returnTraits'
+		//var apiEndpoint = 'http://127.0.0.1:5000/returnTraits'
 
 		//Below endpoint is for prod/when on AWS
-		//var apiEndpoint = 'http://3.82.207.245/returnTraits'
-		console.log(this.currentTraits)
+		var apiEndpoint = 'http://3.82.207.245/returnTraits'
 		axios.post(apiEndpoint, {
 			'command': 'giveMeInfo',
 			'traitList': this.currentTraits
@@ -128,25 +125,24 @@ class VarStore {
 			.then(response => this.traitInfoHelper(response));
 	}
 	traitInfoHelper(httpResponse){
-		console.log(httpResponse.data['traitList'])
 		this.traitsWithDescriptions = httpResponse.data['traitList']
 	}
 	updateActivityInfo(){
 		this.currentTime = 30
 		this.goToTimerPage = false
-		if(this.activityPage == 'personalValues'){
+		if(this.activityPage === 'personalValues'){
 			this.activityTitle = 'Whats worse?'
 			this.activityParagraph = 'I Hate '
 			this.activityTimerTitle = 'Talk about why you hate:'
-		}else if (this.activityPage == 'teamContribution'){
+		}else if (this.activityPage === 'teamContribution'){
 			this.activityTitle = 'What resonates with you?'
 			this.activityParagraph = 'I Bring '	
 			this.activityTimerTitle = 'Talk about how you bring:'	
-		} else if (this.activityPage == 'personalEnergizers'){
+		} else if (this.activityPage === 'personalEnergizers'){
 			this.activityTitle = 'What feels right?'
 			this.activityParagraph = 'I Need '	
 			this.activityTimerTitle = 'Talk about why you need:'
-		}else if (this.activityPage == 'myMindSet1'){
+		}else if (this.activityPage === 'myMindSet1'){
 			this.activityTitle = 'For your next task, which strength will be most useful?'
 			this.activityParagraph = ''	
 			this.activityTimerTitle = 'Consider how you can be a '
@@ -155,15 +151,12 @@ class VarStore {
 	selectLines(currentOne) {
       var tempLine = currentOne
       this.testVar = tempLine
-      console.log(this.testVar)
       if(!this.whoAmILines.includes(tempLine)){
         this.whoAmILines.push(tempLine)
       }else{
         var lineIndex = this.whoAmILines.indexOf(tempLine)
         this.whoAmILines.splice(lineIndex, 1)
       }
-      console.log(this.whoAmILines)
-      console.log(tempLine)
   }
 }
 
@@ -194,6 +187,7 @@ decorate(VarStore, {
     whoAmIAdjs: observable,
     shouldResetTimer: observable,
     testVar: observable,
+    loadingResponse: observable,
     addTrait: action,
     setTraits: action,
     loginFunc: action,

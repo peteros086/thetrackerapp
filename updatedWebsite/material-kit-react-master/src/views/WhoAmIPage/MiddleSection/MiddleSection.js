@@ -2,11 +2,6 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-
-// core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 //NEW IMPORTS
@@ -30,7 +25,7 @@ export default function MiddleSection(props) {
 
   function selectNoun(noun){
     varSet.firstNoun = noun
-    console.log(varSet.firstNoun)
+    //console.log(varSet.firstNoun)
     varSet.whoAmIAdjs = []
     varSet.whoAmINames = []
     props.history.push('/secondCardActivity')
@@ -39,7 +34,7 @@ export default function MiddleSection(props) {
   function makeDescriptiveButtons(traitName){
     //var traitNoun = traitName['whoAmI']
     return(
-          <Button size='lg' color='info' onClick = {() => selectNoun(traitName)} >
+          <Button size='lg' color='info' id={traitName} onClick = {() => selectNoun(traitName)} >
             {traitName}
           </Button>
       )
@@ -52,7 +47,7 @@ export default function MiddleSection(props) {
       <div>
             {nouns}
             <br/>
-            <Button color="primary" size="lg" onClick = {() => anotherGoBackFunc()}>
+            <Button color="primary" size="lg" id='backButton' onClick = {() => anotherGoBackFunc()}>
               go back
             </Button>
       </div>

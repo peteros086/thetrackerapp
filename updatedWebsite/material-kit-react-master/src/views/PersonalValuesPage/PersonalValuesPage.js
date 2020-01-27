@@ -34,7 +34,7 @@ export default function PersonalValuesPage(props) {
   const { ...rest } = props;
 
   function showValues(value){
-    console.log(varSet.traitsWithDescriptions)
+    //console.log(varSet.traitsWithDescriptions)
     //console.log(varSet.traitsWithDescriptions[0]['hates'])
     if(varSet.activityPage !== 'myMindSet1'){
       varSet.goToTimerPage = true
@@ -44,15 +44,12 @@ export default function PersonalValuesPage(props) {
       varSet.goToWhoAmIPage = true
       varSet.goToTimerPage = false
       varSet.firstTrait = value
-      console.log(varSet.firstTrait)
       varSet.secondTraits = []
       for(var i=0; i<varSet.traitsWithDescriptions.length; i++){
         if(varSet.firstTrait === varSet.traitsWithDescriptions[i]['name']){
           varSet.firstTrait = varSet.traitsWithDescriptions[i]
-          console.log(varSet.firstTrait)
         }else{
           varSet.secondTraits.push(varSet.traitsWithDescriptions[i])
-          console.log(varSet.secondTraits)
         }
       }
     }
@@ -64,13 +61,11 @@ export default function PersonalValuesPage(props) {
   }
 
   function createHateButtons(hateValue){
-    console.log(hateValue)
     if(varSet.activityPage === 'personalValues'){
       var passValue = hateValue['hates']
-      //console.log(passValue)
       return(
         <div>
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['hates']}
           </Button>
           <br/>
@@ -78,10 +73,9 @@ export default function PersonalValuesPage(props) {
       )
     }else if (varSet.activityPage === 'teamContribution'){
       var passValue = hateValue['brings']
-      //console.log(passValue)
       return(
         <div>
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['brings']}
           </Button>
           <br/>
@@ -89,10 +83,9 @@ export default function PersonalValuesPage(props) {
       )
     }else if(varSet.activityPage === 'personalEnergizers'){
       var passValue = hateValue['needs']
-      //console.log(passValue)
       return(
         <div>
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['needs']}
           </Button>
           <br/>
@@ -100,10 +93,9 @@ export default function PersonalValuesPage(props) {
       )
     }else if(varSet.activityPage === 'myMindSet1'){
       var passValue = hateValue['name']
-      //console.log(passValue)
       return(
         <div>
-          <Button size='lg' color='info' onClick = {() => showValues(passValue)} >
+          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['name']}
           </Button>
           <br/>

@@ -35,7 +35,7 @@ export default function WhoAmIPage(props) {
 
   function selectNoun(noun){
     varSet.firstNoun = noun
-    console.log(varSet.firstNoun)
+    //console.log(varSet.firstNoun)
     varSet.whoAmIAdjs = []
     varSet.whoAmINames = []
     props.history.push('/secondCardActivity')
@@ -45,7 +45,7 @@ export default function WhoAmIPage(props) {
     //var traitNoun = traitName['whoAmI']
     return(
         <div>
-          <Button size='lg' color='info' onClick = {() => selectNoun(traitName)} >
+          <Button size='lg' color='info' id={traitName} onClick = {() => selectNoun(traitName)} >
             {traitName}
           </Button>
           <br/>

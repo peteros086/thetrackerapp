@@ -5,8 +5,6 @@ import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import Camera from "@material-ui/icons/Camera";
-import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
 
 // core components
 import Button from "components/CustomButtons/Button.js";
@@ -15,7 +13,8 @@ import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 
-import styles from "assets/jss/material-kit-react/views/profilePage.js";
+//import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 //NEW IMPORTS
 import {observer} from "mobx-react"
@@ -39,7 +38,6 @@ export default function ActivityPage(props) {
   function onLogout(){
     varSet.logoutFunc()
     setTimeout(function(){
-      console.log(varSet.loggedIn);
       props.history.replace('/')
     }, 200);
   }
@@ -63,7 +61,6 @@ export default function ActivityPage(props) {
   }
 
   function goToWhoAmIPage(){
-    console.log(classes)
     varSet.activityPage = 'myMindSet1'
     varSet.updateActivityInfo()
     props.history.push('/activity')
@@ -96,7 +93,6 @@ export default function ActivityPage(props) {
                 </GridContainer>
               )
           }
-        console.log(placeHolder)
     return placeHolder
   }
 
@@ -107,30 +103,13 @@ export default function ActivityPage(props) {
         <Parallax small filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
           <h1 className={classes.title}>
-          Effective Team Dynamics
+          ETD Activites
           </h1>
           </div>
         </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
-{/*
-            <div className={classes.description}>
-              <Button size='lg' color='info' onClick={() => goToPersonalValuePage()}>
-              Personal Values (I Hate section)
-              </Button>
-              <Button size='lg' color='info' onClick={() => goToTeamContributionPage()}>
-                Team Contribution (I Bring section)
-              </Button>
-              <Button size='lg' color='info' onClick={() => goToPersonalEnergizersPage()}>
-                Personal Energizers (I Need section)
-              </Button>
-              <Button size='lg' color='info' onClick={() => goToWhoAmIPage()}>
-                WHO AM I ACTIVITY
-              </Button>
-              <br />
-            </div>
-*/}
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
               
@@ -146,7 +125,7 @@ export default function ActivityPage(props) {
 
 
             <NavPills
-                color="rose"
+                color="primary"
                 horizontal={{
                   tabsGrid: { xs: 12, sm: 4, md: 4 },
                   contentGrid: { xs: 12, sm: 8, md: 8 }
@@ -157,11 +136,11 @@ export default function ActivityPage(props) {
                     tabIcon: Camera,
                     tabContent: (
                       <span>
-                        <p>
+                        <h3 className={classes.boxTitle}>
                           Discover which strength you should use to best accomplish your next task!
-                        </p>
+                        </h3>
                         <br />
-                        <Button size='lg' color='info' onClick={() => goToWhoAmIPage()}>
+                        <Button size='lg' color='rose' id="start1" onClick={() => goToWhoAmIPage()}>
                           START
                         </Button>
                       </span>
@@ -172,11 +151,11 @@ export default function ActivityPage(props) {
                     tabIcon: Camera,
                     tabContent: (
                       <span>
-                        <p>
+                        <h3 className={classes.boxTitle}>
                           Uncover what you value when working with groups!
-                        </p>
+                        </h3>
                         <br />
-                        <Button size='lg' color='info' onClick={() => goToPersonalValuePage()}>
+                        <Button size='lg' color='rose' id="start2" onClick={() => goToPersonalValuePage()}>
                           START
                         </Button>
                       </span>
@@ -187,11 +166,11 @@ export default function ActivityPage(props) {
                     tabIcon: Camera,
                     tabContent: (
                       <span>
-                        <p>
+                        <h3 className={classes.boxTitle}>
                           Establish how you can contribute to your teams!
-                        </p>
+                        </h3>
                         <br />
-                        <Button size='lg' color='info' onClick={() => goToTeamContributionPage()}>
+                        <Button size='lg' color='rose' id="start3" onClick={() => goToTeamContributionPage()}>
                           START
                         </Button>
                       </span>
@@ -202,11 +181,11 @@ export default function ActivityPage(props) {
                     tabIcon: Camera,
                     tabContent: (
                       <span>
-                        <p>
+                        <h3 className={classes.boxTitle}>
                           Identify what energizes you when working in teams, and share with your teammates!
-                        </p>
+                        </h3>
                         <br />
-                        <Button size='lg' color='info' onClick={() => goToPersonalEnergizersPage()}>
+                        <Button size='lg' color='rose' id="start4" onClick={() => goToPersonalEnergizersPage()}>
                           START
                         </Button>
                       </span>

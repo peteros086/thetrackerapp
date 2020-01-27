@@ -14,6 +14,9 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
+import CircularProgress from '@material-ui/core/CircularProgress';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
@@ -36,19 +39,23 @@ export default function ActualLoginPage(props) {
   const { ...rest } = props;
 
   function onLogin(){
-    console.log('_________')
+    //console.log('_________')
+    console.log(varSet.loadingResponse)
     varSet.loginFunc()
-    console.log(props.history.location.pathname)
+    console.log(varSet.loadingResponse)
+    //console.log(props.history.location.pathname)
     setTimeout(function(){
-      console.log(varSet.loggedIn);
+      //console.log(varSet.loggedIn);
       if (varSet.loggedIn){
-        console.log('CHANGING')
+        //console.log('CHANGING')
         props.history.push('/landing-page')
+      }else{
+        console.log('INCORRECT INFO')
       }
     }, 200);
     setTimeout(function(){
       if (varSet.loggedIn && props.history.location.pathname === '/'){
-        console.log('CHANGING 2')
+        //console.log('CHANGING 2')
         props.history.push('/landing-page')
       }
     }, 2000);
@@ -111,10 +118,21 @@ export default function ActualLoginPage(props) {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button color="primary" size="lg" onClick = {() => onLogin()}>
-                      Get started
-                    </Button>
+                    {varSet.loadingResponse? 
+                      <Button id="submit" color="primary" size="lg" onClick = {() => onLogin()} disabled>
+                        Get started
+                      </Button>
+                      :
+                      <Button id="submit" color="primary" size="lg" onClick = {() => onLogin()}>
+                        Get started
+                      </Button>
+                    }
                   </CardFooter>
+                  {varSet.loadingResponse?
+                    <LinearProgress/>
+                    :
+                  <LinearProgress variant='determinate'/>
+                  } 
                 </form>
               </Card>
             </GridItem>

@@ -32,7 +32,6 @@ export default function ActionableStepsPage(props) {
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
 
   function goBack(text){
-    console.log(text)
     varSet.goToWhoAmIPage = false
     varSet.goToTimerPage = false
     props.history.push('/landing-page')
