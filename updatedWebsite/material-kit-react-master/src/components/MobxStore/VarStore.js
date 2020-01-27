@@ -34,6 +34,7 @@ class VarStore {
 	shouldResetTimer = false;
 	testVar = 'a';
 	loadingResponse = false;
+	incorrectLogin = false;
 	addTrait(currentOne) {
 		var traitName = currentOne.trait
 		if(!this.currentTraits.includes(traitName)){
@@ -81,6 +82,7 @@ class VarStore {
 		console.log(this.loadingResponse)
 		if(authenticationStatus){
 			this.loggedIn = true
+			this.incorrectLogin = false
 			this.visibleName = serverResponse.data['ID']
 		}
 	}
@@ -188,6 +190,7 @@ decorate(VarStore, {
     shouldResetTimer: observable,
     testVar: observable,
     loadingResponse: observable,
+    incorrectLogin: observable,
     addTrait: action,
     setTraits: action,
     loginFunc: action,

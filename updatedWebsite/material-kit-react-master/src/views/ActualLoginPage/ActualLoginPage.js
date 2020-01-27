@@ -14,8 +14,10 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
-import CircularProgress from '@material-ui/core/CircularProgress';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import SnackbarContent from "components/Snackbar/SnackbarContent.js";
+import Warning from "@material-ui/icons/Warning";
+
 
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
@@ -43,6 +45,8 @@ export default function ActualLoginPage(props) {
     console.log(varSet.loadingResponse)
     varSet.loginFunc()
     console.log(varSet.loadingResponse)
+    console.log('TTTTTTTTTTT')
+    console.log(varSet.incorrectLogin)
     //console.log(props.history.location.pathname)
     setTimeout(function(){
       //console.log(varSet.loggedIn);
@@ -51,6 +55,8 @@ export default function ActualLoginPage(props) {
         props.history.push('/landing-page')
       }else{
         console.log('INCORRECT INFO')
+        varSet.incorrectLogin = true
+        console.log(varSet.incorrectLogin)
       }
     }, 200);
     setTimeout(function(){
@@ -72,6 +78,18 @@ export default function ActualLoginPage(props) {
         }}
       >
         <div className={classes.container}>
+        {varSet.incorrectLogin &&
+            <SnackbarContent
+              message={
+                <span>
+                  <b>Error:</b> Incorrect Login Info
+                </span>
+              }
+              close
+              color="danger"
+              icon={Warning}
+            />
+        }
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>
@@ -131,7 +149,7 @@ export default function ActualLoginPage(props) {
                   {varSet.loadingResponse?
                     <LinearProgress/>
                     :
-                  <LinearProgress variant='determinate'/>
+                  <LinearProgress variant='determinate' value={100}/>
                   } 
                 </form>
               </Card>
