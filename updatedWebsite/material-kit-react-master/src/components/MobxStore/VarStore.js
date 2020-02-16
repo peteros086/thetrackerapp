@@ -67,7 +67,11 @@ class VarStore {
 		//var apiEndpoint = 'http://127.0.0.1:5000/login'
 
 		//Below endpoint is for prod/when on AWS
-		var apiEndpoint = 'http://3.82.207.245/login'
+		//var apiEndpoint = 'http://3.82.207.245/login'
+
+		//Below endpoint is for prod when on GATECH Virtual Machine
+		var apiEndpoint = 'http://teamdynamics.gatech.edu/login'
+
 		this.loadingResponse = true
 		axios.post(apiEndpoint, {
 			'command': this.currentTraits,
@@ -91,7 +95,11 @@ class VarStore {
 		//var apiEndpoint = 'http://127.0.0.1:5000/logout'
 
 		//Below endpoint is for prod/when on AWS
-		var apiEndpoint = 'http://3.82.207.245/logout'
+		//var apiEndpoint = 'http://3.82.207.245/logout'
+
+		//Below endpoint is for prod when on GATECH Virtual Machine
+		var apiEndpoint = 'http://teamdynamics.gatech.edu/logout'
+
 		axios.post(apiEndpoint, {
 			'command': 'logout'
 		})
@@ -119,7 +127,11 @@ class VarStore {
 		//var apiEndpoint = 'http://127.0.0.1:5000/returnTraits'
 
 		//Below endpoint is for prod/when on AWS
-		var apiEndpoint = 'http://3.82.207.245/returnTraits'
+		//var apiEndpoint = 'http://3.82.207.245/returnTraits'
+
+		//Below endpoint is for prod when on GATECH Virtual Machine
+		var apiEndpoint = 'http://teamdynamics.gatech.edu/returnTraits'
+
 		axios.post(apiEndpoint, {
 			'command': 'giveMeInfo',
 			'traitList': this.currentTraits

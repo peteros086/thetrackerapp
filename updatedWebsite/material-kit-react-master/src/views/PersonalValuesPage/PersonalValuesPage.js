@@ -24,7 +24,7 @@ import WhoAmIPage from 'views/WhoAmIPage/WhoAmIPage.js'
 import AnotherMiddleSec from './AnotherMiddleSec/AnotherMiddleSec.js'
 
 
-
+ 
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -85,7 +85,7 @@ export default function PersonalValuesPage(props) {
       var passValue = hateValue['needs']
       return(
         <div>
-          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
+          <Button size='lg' fullWidth='true' color='info' id={passValue} onClick = {() => showValues(passValue)} >
             {varSet.activityParagraph}{hateValue['needs']}
           </Button>
           <br/>
