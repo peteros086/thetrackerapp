@@ -35,6 +35,11 @@ class VarStore {
 	testVar = 'a';
 	loadingResponse = false;
 	incorrectLogin = false;
+	temporaryValue = '';
+	updateValue(value){
+		this.temporaryValue = value;
+		//console.log(this.temporaryValue)
+	}
 	addTrait(currentOne) {
 		var traitName = currentOne.trait
 		if(!this.currentTraits.includes(traitName)){
@@ -70,7 +75,7 @@ class VarStore {
 		//var apiEndpoint = 'http://3.82.207.245/login'
 
 		//Below endpoint is for prod when on GATECH Virtual Machine
-		var apiEndpoint = 'http://teamdynamics.gatech.edu/login'
+		var apiEndpoint = 'https://teamdynamics.mse.gatech.edu/login'
 
 		this.loadingResponse = true
 		axios.post(apiEndpoint, {
@@ -98,7 +103,7 @@ class VarStore {
 		//var apiEndpoint = 'http://3.82.207.245/logout'
 
 		//Below endpoint is for prod when on GATECH Virtual Machine
-		var apiEndpoint = 'http://teamdynamics.gatech.edu/logout'
+		var apiEndpoint = 'https://teamdynamics.mse.gatech.edu/logout'
 
 		axios.post(apiEndpoint, {
 			'command': 'logout'
@@ -130,7 +135,7 @@ class VarStore {
 		//var apiEndpoint = 'http://3.82.207.245/returnTraits'
 
 		//Below endpoint is for prod when on GATECH Virtual Machine
-		var apiEndpoint = 'http://teamdynamics.gatech.edu/returnTraits'
+		var apiEndpoint = 'https://teamdynamics.mse.gatech.edu/returnTraits'
 
 		axios.post(apiEndpoint, {
 			'command': 'giveMeInfo',
@@ -146,15 +151,15 @@ class VarStore {
 		this.goToTimerPage = false
 		if(this.activityPage === 'personalValues'){
 			this.activityTitle = 'Whats worse?'
-			this.activityParagraph = 'I Hate '
+			this.activityParagraph = 'I hate: '
 			this.activityTimerTitle = 'Talk about why you hate:'
 		}else if (this.activityPage === 'teamContribution'){
 			this.activityTitle = 'What resonates with you?'
-			this.activityParagraph = 'I Bring '	
+			this.activityParagraph = 'I bring: '	
 			this.activityTimerTitle = 'Talk about how you bring:'	
 		} else if (this.activityPage === 'personalEnergizers'){
 			this.activityTitle = 'What feels right?'
-			this.activityParagraph = 'I Need '	
+			this.activityParagraph = 'I need: '	
 			this.activityTimerTitle = 'Talk about why you need:'
 		}else if (this.activityPage === 'myMindSet1'){
 			this.activityTitle = 'For your next task, which strength will be most useful?'

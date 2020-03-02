@@ -23,7 +23,7 @@ import TimerPage from 'views/TimerPage/TimerPage.js'
 import WhoAmIPage from 'views/WhoAmIPage/WhoAmIPage.js'
 import AnotherMiddleSec from './AnotherMiddleSec/AnotherMiddleSec.js'
 
-
+import GoBackHeader from "components/Header/GoBackHeader.js";
  
 const dashboardRoutes = [];
 
@@ -60,55 +60,19 @@ export default function PersonalValuesPage(props) {
     props.history.push('/landing-page')
   }
 
-  function createHateButtons(hateValue){
-    if(varSet.activityPage === 'personalValues'){
-      var passValue = hateValue['hates']
-      return(
-        <div>
-          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
-            {varSet.activityParagraph}{hateValue['hates']}
-          </Button>
-          <br/>
-        </div>
-      )
-    }else if (varSet.activityPage === 'teamContribution'){
-      var passValue = hateValue['brings']
-      return(
-        <div>
-          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
-            {varSet.activityParagraph}{hateValue['brings']}
-          </Button>
-          <br/>
-        </div>
-      )
-    }else if(varSet.activityPage === 'personalEnergizers'){
-      var passValue = hateValue['needs']
-      return(
-        <div>
-          <Button size='lg' fullWidth='true' color='info' id={passValue} onClick = {() => showValues(passValue)} >
-            {varSet.activityParagraph}{hateValue['needs']}
-          </Button>
-          <br/>
-        </div>
-      )
-    }else if(varSet.activityPage === 'myMindSet1'){
-      var passValue = hateValue['name']
-      return(
-        <div>
-          <Button size='lg' color='info' id={passValue} onClick = {() => showValues(passValue)} >
-            {varSet.activityParagraph}{hateValue['name']}
-          </Button>
-          <br/>
-        </div>
-      )
-    }
-  }
-
-  var HateButtons = varSet.traitsWithDescriptions.map(createHateButtons)
-
   if(!varSet.goToTimerPage && !varSet.goToWhoAmIPage){
     return (
       <div>
+            <GoBackHeader
+        brand="Go Back"
+        fixed
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "white"
+        }}
+        {...rest}
+      />
         <Parallax filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
             <GridContainer>

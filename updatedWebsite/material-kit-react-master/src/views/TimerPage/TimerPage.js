@@ -16,6 +16,8 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import {observer} from "mobx-react"
 import varSet from 'components/MobxStore/VarStore.js'
 import UpdatedFooter from "components/Footer/UpdatedFooter.js";
+import TimerHeader from "components/Header/TimerHeader.js";
+
 
 const dashboardRoutes = [];
 
@@ -93,6 +95,16 @@ export default function TimerPage(props) {
     return (
 
       <div>
+      <TimerHeader
+        brand="Go Back"
+        fixed
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "white"
+        }}
+        {...rest}
+      />
         <Parallax filter image={require("assets/img/blackImage.jpg")}>
           <div className={classes.container}>
             <GridContainer>
@@ -119,10 +131,6 @@ export default function TimerPage(props) {
                     {varSet.timerButtonText}
                   </Button>                  
                 }
-
-                <Button color="primary" size="lg" onClick = {() => backToLast()} simple>
-                  go back
-                </Button>
                 {varSet.currentTime === 0?
                   <Button color="primary" size="lg" onClick = {() => nextPage()} simple>
                     Continue
