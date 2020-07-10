@@ -22,7 +22,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/landing-page" component={LandingPage} />
       <Route path="/activity" component={PersonalValuesPage} />
-      
+      <Route path="/components" component={Components} />
       {/*
       <Route path="/components" component={Components} />
       */}
