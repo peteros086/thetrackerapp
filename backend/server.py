@@ -4,6 +4,8 @@ from flask_cors import CORS
 import flask_login
 import databaseFuncs
 import infoFuncs
+from pymongo import MongoClient
+from bson.json_util import dumps
 
 app = Flask(__name__, static_folder='./templates/build/static',
             template_folder='./templates')
@@ -17,6 +19,12 @@ users = {'asdf': {'password': 'secret'}}
 
 class User(flask_login.UserMixin):
     pass
+
+#MongoDB Setup with mongo-flask bullshit, don't use
+#app.config["MONGO_URI"] = "mongodb://localhost:27017/test"
+#mongo = PyMongo(app)
+client = MongoClient('localhost', 27017)
+db = client['test']
 
 
 @login_manager.user_loader
@@ -61,7 +69,7 @@ def logout():
 		print(authStatus)
 		httpResponse = jsonify({'ID': None, 'AUTH': authStatus})
 		return httpResponse
-	else: 
+	else:
 		return 'an error occured'
 
 
@@ -85,13 +93,45 @@ def returnTraits():
 	badResponse = jsonify({'ERROR':'SOMETHING BAD HAPPENED'})
 	return badResponse
 
+#Functions that build out the database with Mongo
+
+'''
+@app.route('/add-person', methods=['POST'])
+def addPerson():
+	collection = db['people']
+	post_id = collection.insert_one(request.json).inserted_id
+	return dumps(post_id)
+
+@app.route('/add-dpi', methods=['POST'])
+def addDpi():
+	collection = db['dpis']
+	post_id = collection.insert_one(request.json).inserted_id
+	return dumps(post_id)
+
+	'''
+
+@app.route('/get-<item>', methods=['GET'])
+def getThings(item=None):
+	collection = db[item]
+	return dumps(collection.find())
+
+@app.route('/add-<item>', methods=['POST'])
+def addThing(item=None):
+	collection = db[item]
+	post_id = collection.insert_one(request.json).inserted_id
+	return dumps(post_id)
+
+
+
+
+
 
 
 
 
 #____________________________________________
 #USE THE BELOW VERSION OF '/protected' ROUTE WHEN DONE MAKING FRONT END CHANGES
-#E.G. npm run build -> scp -r build /path/to/backed/templates -> python3 server.py	
+#E.G. npm run build -> scp -r build /path/to/backed/templates -> python3 server.py
 @app.route('/protected')
 @flask_login.login_required
 def protected():
