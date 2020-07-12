@@ -1,11 +1,12 @@
-from flask import Flask, jsonify, request, send_from_directory, redirect, url_for
+from flask import Flask, jsonify, request, send_from_directory, redirect, url_for, Response
 import os
 from flask_cors import CORS
 import flask_login
 import databaseFuncs
-import infoFuncs
+#import infoFuncs
 from pymongo import MongoClient
 from bson.json_util import dumps
+from bson.objectid import ObjectId
 
 
 app = Flask(__name__, static_folder='./templates/build/static',
@@ -113,13 +114,27 @@ def addDpi():
 @app.route('/get-<item>', methods=['GET'])
 def getThings(item=None):
 	collection = db[item]
-	return dumps(collection.find())
+	r = Response(response = dumps(collection.find()), mimetype="application/json")
+	return r
 
 @app.route('/add-<item>', methods=['POST'])
 def addThing(item=None):
 	collection = db[item]
-	post_id = collection.insert_one(request.json).inserted_id
-	return dumps(post_id)
+	#Returns the id of the added item
+	postId = collection.insert_one(request.json).inserted_id
+	r = Response(response = dumps(postId), mimetype="application/json")
+	return r
+
+@app.route('/remove-<item>', methods=['DELETE'])
+def removeThing(item=None):
+	collection = db[item]
+	if (request.args.get('_id') != None):
+		args = {'_id': ObjectId(request.args.get('_id'))}
+	else:
+		args = request.args
+	item = collection.find_one_and_delete(args)
+	r = Response(response = dumps(item), mimetype="application/json")
+	return r
 
 
 
