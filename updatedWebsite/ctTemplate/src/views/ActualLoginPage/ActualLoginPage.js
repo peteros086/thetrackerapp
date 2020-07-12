@@ -18,7 +18,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 import Warning from "@material-ui/icons/Warning";
 
-
+ 
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
@@ -78,18 +78,98 @@ export default function ActualLoginPage(props) {
         }}
       >
         <div className={classes.container}>
-        {varSet.incorrectLogin &&
-            <SnackbarContent
-              message={
-                <span>
-                  <b>Error:</b> Incorrect Login Info
-                </span>
-              }
-              close
-              color="danger"
-              icon={Warning}
-            />
-        }
+          {varSet.incorrectLogin &&
+              <SnackbarContent
+                message={
+                  <span>
+                    <b>Error:</b> Incorrect Login Info
+                  </span>
+                }
+                close
+                color="danger"
+                icon={Warning}
+              />
+          }
+
+
+
+
+
+
+          <h1>Customer Interviews</h1>
+          <br />
+          <GridContainer justify="center">
+            <GridItem>
+              <Card className={classes[cardAnimaton]}>
+                <form className={classes.form}>
+                  <CardHeader color="primary" className={classes.cardHeader}>
+                    <h2>Login</h2>
+                  </CardHeader>
+                  <p className={classes.divider}>     </p>
+                  <CardBody>
+                    <CustomInput
+                      labelText="Username"
+                      id="user"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        onChange: (event) => varSet.setUsername(event.currentTarget.value),
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Password"
+                      id="pass"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "password",
+                        onChange: (event) => varSet.setPassword(event.currentTarget.value),
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Icon className={classes.inputIconsColor}>
+                              lock_outline
+                            </Icon>
+                          </InputAdornment>
+                        ),
+                        autoComplete: "off"
+                      }}
+                    />
+                  </CardBody>
+                  <CardFooter className={classes.cardFooter}>
+                    {varSet.loadingResponse? 
+                      <Button id="submit" color="primary" size="lg" onClick = {() => onLogin()} disabled>
+                        Get started
+                      </Button>
+                      :
+                      <Button id="submit" color="primary" size="lg" onClick = {() => onLogin()}>
+                        Get started
+                      </Button>
+                    }
+                  </CardFooter>
+                  {varSet.loadingResponse?
+                    <LinearProgress/>
+                    :
+                  <LinearProgress variant='determinate' value={100}/>
+                  } 
+                </form>
+              </Card>
+            </GridItem>
+          </GridContainer>
+
+
+
+
+
+
+
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>

@@ -18,6 +18,9 @@ When finished making changes to the front end, create a build and move it to the
 
 `
 npm run build
+`
+
+`
 scp -r build ../../backend/templates
 `
 

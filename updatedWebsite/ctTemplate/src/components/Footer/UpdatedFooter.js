@@ -71,7 +71,7 @@ export default function UpdatedFooter(props) {
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} ,  Effective Team Dynamics
+          &copy; {1900 + new Date().getYear()} ,  Power Tracker
         </div>
       </div>
     </footer>
