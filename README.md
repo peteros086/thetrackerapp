@@ -33,8 +33,15 @@ python3 server.py
 
 ## Backend
 
-######Generic get-<item> route
+#####Generic get-<item> route
     The get-<item> route is very general and can be used for accessing the Mongo database. Takes a GET request. Returns JSON data. Possible items include:
     - people
     - dpis
     An example might include: `http://127.0.0.1:5000/get-people`
+
+#####Generic add-<item> route
+    The add-<item> route is very general and can be used for add to the Mongo database. Takes a POST request. Returns the ID of the element inserted. Possible items include:
+    - people
+    - dpis
+    An example might include: `http://127.0.0.1:5000/add-people`
+    I know it says "add people" but really it's just for adding one person or one dpi at a time.
