@@ -41,30 +41,7 @@ export default function ActualLoginPage(props) {
   const { ...rest } = props;
 
   function onLogin(){
-    //console.log('_________')
-    console.log(varSet.loadingResponse)
-    varSet.loginFunc()
-    console.log(varSet.loadingResponse)
-    console.log('TTTTTTTTTTT')
-    console.log(varSet.incorrectLogin)
-    //console.log(props.history.location.pathname)
-    setTimeout(function(){
-      //console.log(varSet.loggedIn);
-      if (varSet.loggedIn){
-        //console.log('CHANGING')
-        props.history.push('/landing-page')
-      }else{
-        console.log('INCORRECT INFO')
-        varSet.incorrectLogin = true
-        console.log(varSet.incorrectLogin)
-      }
-    }, 200);
-    setTimeout(function(){
-      if (varSet.loggedIn && props.history.location.pathname === '/'){
-        //console.log('CHANGING 2')
-        props.history.push('/landing-page')
-      }
-    }, 2000);
+    varSet.loginFunc(props.history)
   }
 
   return (

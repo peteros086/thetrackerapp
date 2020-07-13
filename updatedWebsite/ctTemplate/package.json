@@ -11,6 +11,7 @@
     "classnames": "2.2.6",
     "history": "4.9.0",
     "mobx": "^5.14.2",
+    "mobx-history-api": "^1.1.4",
     "mobx-react": "^6.1.4",
     "moment": "2.24.0",
     "node-sass": "4.12.0",

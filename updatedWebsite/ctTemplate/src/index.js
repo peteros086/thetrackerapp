@@ -9,10 +9,7 @@ import "assets/scss/material-kit-react.scss?v=1.8.0";
 import Components from "views/Components/Components.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import ActualLoginPage from 'views/ActualLoginPage/ActualLoginPage.js';
-import PersonalValuesPage from "views/PersonalValuesPage/PersonalValuesPage.js";
-import ActionableStepsPage from "views/ActionableStepsPage/ActionableStepsPage.js";
-import SecondCardPage from "views/SecondCardPage/SecondCardPage.js";
-
+import EmailDraftPage from 'views/EmailDraftPage/EmailDraftPage.js'
 
 
 var hist = createBrowserHistory();
@@ -21,14 +18,8 @@ ReactDOM.render(
   <Router onUpdate={() => window.scrollTo(0, 0)} history={hist}>
     <Switch>
       <Route path="/landing-page" component={LandingPage} />
-      <Route path="/activity" component={PersonalValuesPage} />
+      <Route path="/draft" component={EmailDraftPage} />
       <Route path="/components" component={Components} />
-      {/*
-      <Route path="/components" component={Components} />
-      */}
-
-      <Route path="/actionableSteps" component={ActionableStepsPage} />
-      <Route path="/secondCardActivity" component={SecondCardPage} />
 
       <Route path="/" component={ActualLoginPage} />
     </Switch>

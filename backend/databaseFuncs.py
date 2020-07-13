@@ -1,5 +1,7 @@
 import sqlite3
 import os
+from passlib.hash import sha256_crypt
+
 
 nameOfDB = 'userDB.db'
 
@@ -13,15 +15,23 @@ def createDB():
 def createUserTable():
 	conn = sqlite3.connect(nameOfDB)
 	c = conn.cursor()
-	c.execute('''CREATE TABLE users
-             (user text, pass text, class text, traits text)''')
+	c.execute('''CREATE TABLE userTable
+             (user text, pass text, class text, todo text)''')
 	conn.commit()
 	conn.close()
 
-def addUser(username, password, className):
+def hashPassword(unhashedPassword):
+	"""
+	 This function hashed the password for the user account
+	"""
+	password = sha256_crypt.encrypt(unhashedPassword)
+	return password
+
+def addUser(username, password, className, todo):
+	hashedPassword = hashPassword(password)
 	conn = sqlite3.connect(nameOfDB)
 	c = conn.cursor()
-	c.execute("INSERT INTO users VALUES (?,?,?,?)", [username, password, className, 'None Yet'])
+	c.execute("INSERT INTO userTable VALUES (?,?,?,?)", [username, hashedPassword, className, todo])
 	conn.commit()
 	conn.close()
 
@@ -29,7 +39,7 @@ def removeUser(username):
 	conn = sqlite3.connect(nameOfDB)
 	c = conn.cursor()
 	try:
-		c.execute("DELETE FROM users where user = ?", [username])
+		c.execute("DELETE FROM userTable where user = ?", [username])
 		conn.commit()
 		conn.close()
 	except Error as e:
@@ -38,7 +48,7 @@ def removeUser(username):
 def checkLogin(username, password):
 	conn = sqlite3.connect(nameOfDB)
 	c = conn.cursor()
-	c.execute('SELECT * FROM users WHERE user = ?', [username])
+	c.execute('SELECT * FROM userTable WHERE user = ?', [username])
 	userList = c.fetchall()
 	print(username)
 	if len(userList) == 0:
@@ -51,7 +61,7 @@ def checkLogin(username, password):
 		conn.commit()
 		conn.close()
 		return [False, "Multiple Users Found, we need to sort this out"]
-	elif userList[0][1] == password:
+	elif sha256_crypt.verify(password, userList[0][1]):
 		#Correct Username, Correct Password
 		conn.commit()
 		conn.close()
@@ -62,22 +72,20 @@ def checkLogin(username, password):
 		conn.close()
 		return [False, "INCORRECT PASSWORD"]
 
-
-def updateTraits(username, traitList):
-	traitEntry = traitsToString(traitList)
+def findInfoFromUsername(username):
+	"""
+		This returns the info stored in the datbase about a particular user
+			Used mainly in the login function
+	"""
 	conn = sqlite3.connect(nameOfDB)
-	c = conn.cursor()	
-	c.execute("""UPDATE users SET traits = ? WHERE user = ?""", [traitEntry, username])
+	c = conn.cursor()
+	c.execute("SELECT * FROM userTable where user = ?", [username])
+	rows = c.fetchall()
+	positon = ''
+	for row in rows:
+		info = row
 	conn.commit()
 	conn.close()
+	return info
 
-def traitsToString(traitList):
-	traitString = ''
-	for i in range(0, len(traitList)):
-		traitString = traitString + traitList[i]
-		traitString = traitString + ':'
-	return traitString
-
-#addUser('wfwefwef', 'asdfasdf', 'bruh')
-#updateTraits('wfwefwef', ['asdf', 'fdsa', 'tttt'])
-
+#print(checkLogin('testStudent', 'etdClassroom'))

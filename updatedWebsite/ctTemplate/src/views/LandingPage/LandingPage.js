@@ -42,7 +42,7 @@ export default function LandingPage(props) {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Select Your 5 Traits </h1>
+                <h1 className={classes.title}>To do: </h1>
                 <br />
               </GridItem>
             </GridContainer>
@@ -50,8 +50,8 @@ export default function LandingPage(props) {
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
-            <TraitSection />
-          </div>
+            <TraitSection history = {props.history}/>
+          </div> 
         </div>
         <UpdatedFooter history={props.history}/>
       </div>

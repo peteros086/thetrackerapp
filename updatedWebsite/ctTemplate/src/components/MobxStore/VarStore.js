@@ -2,108 +2,126 @@ import { action, observable, decorate } from 'mobx';
 import axios from 'axios';
 
 class VarStore {
-	traitList = ['Achiever', 'Activator', 'Adaptability', 'Analytical', 'Arranger', 'Belief', 'Command', 'Communication', 'Competition', 'Connectedness', 'Consistency', 'Context', 'Deliberative', 'Developer', 'Discipline', 'Empathy', 'Focus', 'Futuristic', 'Harmony', 'Ideation', 'Includer', 'Individualization', 'Input', 'Intellection', 'Learner', 'Maximizer', 'Positivity', 'Relator', 'Responsibility', 'Restorative', 'SelfAssurance', 'Significance', 'Strategic', 'Woo'];
-	temp = 'asdf';
-	currentTraits = [];
-	selectedTraits = [];
-	hasChosenTraits = false;
 	currentUser = '';
 	currentPass = '';
 	visibleName = '';
 	loggedIn = false;
-	traitsWithDescriptions = [];
-	traitTabSection = [];
-	goToTimerPage = false;
-	descriptionForTimer = '';
-	currentTime = 30;
-	activityPage = '';
-	activityTitle = '';
-	activityParagraph = '';
-	activityTimerTitle = '';
-	timerButtonText = 'Start Timer';
-	textValue: '';
-	textPageTitle = '';
-	goToWhoAmIPage = false;
-	firstTrait = '';
-	firstNoun = '';
-	secondTraits = [];
-	secondBackupTraits = [];
-	whoAmINames = [];
-	whoAmIAdjs = [];
-	whoAmILines = [];
 	shouldResetTimer = false;
-	testVar = 'a';
 	loadingResponse = false;
 	incorrectLogin = false;
-	temporaryValue = '';
-	updateValue(value){
-		this.temporaryValue = value;
-		//console.log(this.temporaryValue)
+	emailUser = '';
+	emailPass = '';
+	emailList = [];
+	emailSubject = '';
+	emailBody = '';
+	emailRecipient = '';
+	pushPageChange = '';
+	setEmailUser(name){
+		this.emailUser = name
+		//console.log(this.emailUser)
 	}
-	addTrait(currentOne) {
-		var traitName = currentOne.trait
-		if(!this.currentTraits.includes(traitName)){
-			if(this.currentTraits.length < 5){
-				this.currentTraits.push(traitName)
-			}
+	setEmailPass(pass){
+		this.emailPass = pass
+		//console.log(this.emailPass)
+	}
+	setEmailSubject(subject){
+		this.emailSubject = subject
+	}
+	setEmailBody(body){
+		this.emailBody = body
+	}
+	setEmailRecipient(addr){
+		this.emailRecipient = addr
+	}
+	switchPage(pageName){
+		if(this.loggedIn){
+			this.pushPageChange.push(pageName)
 		}else{
-			var traitIndex = this.currentTraits.indexOf(traitName)
-			this.currentTraits.splice(traitIndex, 1)
+			this.pushPageChange.push('/')
 		}
+		
 	}
-	setTraits() {
-		var i
-		var inputList = this.currentTraits
-		if(inputList.length === 5){
-			this.selectedTraits = []
-			for(i = 0; i <inputList.length; i++){
-				this.selectedTraits.push(inputList[i])
-			}
-			this.hasChosenTraits = true
-			this.getTraitInfo()
-			this.loginFunc()
-		}else{
-			this.hasChosenTraits = false
-			alert("PLEASE SELECT 5 TRAITS")
-		}
-	}
-	async loginFunc(){
+	async getEmailList(historyProps){
 		//Below endpoint is for testing
-		//var apiEndpoint = 'http://127.0.0.1:5000/login'
+		var apiEndpoint = 'http://127.0.0.1:5000/returnEmails'
 
 		//Below endpoint is for prod/when on AWS
-		//var apiEndpoint = 'http://3.82.207.245/login'
-
-		//Below endpoint is for prod when on GATECH Virtual Machine
-		var apiEndpoint = 'https://teamdynamics.mse.gatech.edu/login'
+		//var apiEndpoint = 'https://www.thetrackerapp.net/login'
 
 		this.loadingResponse = true
 		axios.post(apiEndpoint, {
-			'command': this.currentTraits,
+			'username': this.currentUser,
+			'command' : 'getEmails'
+		})
+			.then(response => this.listHelper(response, historyProps));
+	}
+	async listHelper(serverResponse, historyProps){
+		// Returns a list of emails that need to be sent 
+		var isHTML = false
+		console.log(serverResponse)
+		console.log(serverResponse.data)
+		this.emailSubject = serverResponse.data['subject']
+		this.emailBody = serverResponse.data['body']
+		this.emailRecipient = serverResponse.data['recipient']
+		this.pushPageChange = historyProps
+		historyProps.push('/landing-page')
+	}
+	async sendEmail(){
+		//Below endpoint is for testing
+		var apiEndpoint = 'http://127.0.0.1:5000/sendEmail'
+
+		//Below endpoint is for prod/when on AWS
+		//var apiEndpoint = 'https://www.thetrackerapp.net/sendEmail'
+
+		this.loadingResponse = true
+		axios.post(apiEndpoint, {
+			'user': this.emailUser,
+			'pwd': this.emailPass,
+			'subject': this.emailSubject,
+			'body': this.emailBody,
+			'recipient': this.emailRecipient,
+			'command' : 'send'
+		})
+			.then(response => this.emailHelper(response));
+	}
+	async emailHelper(serverResponse){
+		console.log(serverResponse)
+		console.log(serverResponse.data['Status'])
+	}
+	async loginFunc(historyProps){
+		//Below endpoint is for testing
+		var apiEndpoint = 'http://127.0.0.1:5000/login'
+
+		//Below endpoint is for prod/when on AWS
+		//var apiEndpoint = 'https://www.thetrackerapp.net/login'
+
+		this.loadingResponse = true
+		axios.post(apiEndpoint, {
 			'username': this.currentUser,
 			'password': this.currentPass
 		})
-			.then(response => this.loginHelper(response));
+			.then(response => this.loginHelper(response, historyProps));
 	}
-	async loginHelper(serverResponse){
+	async loginHelper(serverResponse, historyProps){
 		var authenticationStatus = serverResponse.data['AUTH']
 		this.loadingResponse = false
-		console.log(this.loadingResponse)
+		console.log(authenticationStatus)
 		if(authenticationStatus){
 			this.loggedIn = true
 			this.incorrectLogin = false
 			this.visibleName = serverResponse.data['ID']
+			this.getEmailList(historyProps)
 		}
 	}
 	async logoutFunc(){
 		//Below endpoint is for testing
-		//var apiEndpoint = 'http://127.0.0.1:5000/logout'
+		var apiEndpoint = 'http://127.0.0.1:5000/logout'
 
 		//Below endpoint is for prod/when on AWS
-		//var apiEndpoint = 'http://3.82.207.245/logout'
+		//var apiEndpoint = 'https://www.thetrackerapp.net/logout'
 
 		//Below endpoint is for prod when on GATECH Virtual Machine
-		var apiEndpoint = 'https://teamdynamics.mse.gatech.edu/logout'
+		//var apiEndpoint = 'https://teamdynamics.mse.gatech.edu/logout'
 
 		axios.post(apiEndpoint, {
 			'command': 'logout'
@@ -123,102 +141,19 @@ class VarStore {
 	setPassword(newPass){
 		this.currentPass = newPass
 	}
-	resetTraits(){
-		this.currentTraits = []
-		this.hasChosenTraits = false
-	}
-	async getTraitInfo(){
-		//Below endpoint is for testing
-		//var apiEndpoint = 'http://127.0.0.1:5000/returnTraits'
-
-		//Below endpoint is for prod/when on AWS
-		//var apiEndpoint = 'http://3.82.207.245/returnTraits'
-
-		//Below endpoint is for prod when on GATECH Virtual Machine
-		var apiEndpoint = 'https://teamdynamics.mse.gatech.edu/returnTraits'
-
-		axios.post(apiEndpoint, {
-			'command': 'giveMeInfo',
-			'traitList': this.currentTraits
-		})
-			.then(response => this.traitInfoHelper(response));
-	}
-	traitInfoHelper(httpResponse){
-		this.traitsWithDescriptions = httpResponse.data['traitList']
-	}
-	updateActivityInfo(){
-		this.currentTime = 30
-		this.goToTimerPage = false
-		if(this.activityPage === 'personalValues'){
-			this.activityTitle = 'Whats worse?'
-			this.activityParagraph = 'I hate: '
-			this.activityTimerTitle = 'Talk about why you hate:'
-		}else if (this.activityPage === 'teamContribution'){
-			this.activityTitle = 'What resonates with you?'
-			this.activityParagraph = 'I bring: '	
-			this.activityTimerTitle = 'Talk about how you bring:'	
-		} else if (this.activityPage === 'personalEnergizers'){
-			this.activityTitle = 'What feels right?'
-			this.activityParagraph = 'I need: '	
-			this.activityTimerTitle = 'Talk about why you need:'
-		}else if (this.activityPage === 'myMindSet1'){
-			this.activityTitle = 'For your next task, which strength will be most useful?'
-			this.activityParagraph = ''	
-			this.activityTimerTitle = 'Consider how you can be a '
-		}
-	}
-	selectLines(currentOne) {
-      var tempLine = currentOne
-      this.testVar = tempLine
-      if(!this.whoAmILines.includes(tempLine)){
-        this.whoAmILines.push(tempLine)
-      }else{
-        var lineIndex = this.whoAmILines.indexOf(tempLine)
-        this.whoAmILines.splice(lineIndex, 1)
-      }
-  }
 }
 
 decorate(VarStore, {
-    traitList: observable,
-    temp: observable,
-    currentTraits: observable,
-    selectedTraits: observable,
-    hasChosenTraits: observable,
     currentUser: observable,
     currentPass: observable,
-    traitsWithDescriptions: observable,
-    goToTimerPage: observable,
-    currentTime: observable,
-    activityPage: observable,
-    activityTitle: observable,
-    activityParagraph: observable,
-    activityTimerTitle: observable,
-    timerButtonText: observable,
-    textValue: observable,
-    textPageTitle: observable,
-    goToWhoAmIPage: observable,
-    firstTrait: observable,
-    firstNoun: observable,
-    secondTraits: observable,
-    secondBackupTraits: observable,
-    whoAmINames: observable,
-    whoAmIAdjs: observable,
-    shouldResetTimer: observable,
-    testVar: observable,
     loadingResponse: observable,
     incorrectLogin: observable,
-    addTrait: action,
-    setTraits: action,
     loginFunc: action,
     loginHelper: action,
     logoutFunc: action,
     logoutHelper: action,
     setUsername: action,
     setPassword: action,
-    resetTraits: action,
-    getTraitInfo: action,
-    traitInfoHelper: action,
     updateActivityInfo: action,
     selectLines: observable,
 })
